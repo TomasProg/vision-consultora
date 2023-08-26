@@ -62,23 +62,33 @@ a {
   background-image: url(../img/img2.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 100vh;
+  width: auto;
   position: relative;
   margin-top: 0;
 }
 
+.hero {
+  display: grid;
+  place-items: center;
+  height: 90vh;
+}
+
 .contenido-hero {
   background-color: rgba(248, 244, 244, .5);
+  width: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 395px;
+  /* position: absolute; */
+  /* width: 100%; */
+  height: 420px;
 }
 
 .logo {
   width: 40%;
+  margin-bottom: 15px;
 }
 
 footer {
