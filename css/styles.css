@@ -35,7 +35,7 @@ nav {
   justify-content: end;
   align-items: center;
   width: auto;
-  gap: 50px;
+  gap: 20px;
 }
 
 .lista {
@@ -97,8 +97,8 @@ a {
 }
 
 .logo {
-  width: 40%;
-  margin-bottom: 15px;
+  width: 45%;
+  margin-bottom: 10px;
 }
 
 footer {
