@@ -31,19 +31,18 @@ h2 {
 }
 
 nav {
-  /* background-color: var(--principal); */
-  /* background-color: rgba(255, 255, 255, 0.089); */
   display: flex;
   justify-content: end;
+  align-items: center;
   width: auto;
   gap: 50px;
 }
 
-nav a {
-  color: var(--negro);
+.lista {
+  color: var(--gris);
   font-family: var(--fuenteAlternativa);
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 a {
