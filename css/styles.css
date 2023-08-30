@@ -39,10 +39,10 @@ nav {
 }
 
 .lista {
-  color: var(--gris);
+  color: #5e5a5a;
   font-family: var(--fuenteAlternativa);
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 a {
