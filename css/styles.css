@@ -177,6 +177,10 @@ path {
   fill: #fff;
 }
 
+ion-icon {
+  margin-right: 5px;
+}
+
 /*Para Celular*/
 @media(max-width: 600px) {
   .contenido-hero {
