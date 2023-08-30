@@ -6,6 +6,7 @@
   --grisClaro: #dfe9f3;
   --negro: #000;
   --fuentePrincipal: 'Noto', sans-serif;
+  --fuenteAlternativa: 'Segoe UI', Tahoma, sans-serif;
 }
 
 html {
@@ -31,14 +32,18 @@ h2 {
 
 nav {
   /* background-color: var(--principal); */
-  background-color: rgba(255, 255, 255, 0.089);
+  /* background-color: rgba(255, 255, 255, 0.089); */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: end;
   width: auto;
+  gap: 50px;
 }
 
 nav a {
-  color: #1b6b3e;
+  color: var(--negro);
+  font-family: var(--fuenteAlternativa);
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 a {
