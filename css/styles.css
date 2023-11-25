@@ -32,7 +32,7 @@ h2 {
 
 nav {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   width: auto;
   gap: 20px;
@@ -85,7 +85,7 @@ a {
 }
 
 .contenido-hero {
-  background-color: rgba(248, 244, 244, .5);
+  /* background-color: rgba(248, 244, 244, .5); */
   width: 100%;
   display: flex;
   justify-content: center;
