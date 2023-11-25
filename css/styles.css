@@ -30,6 +30,7 @@ h2 {
   text-align: center;
 }
 
+
 nav {
   display: flex;
   justify-content: center;
@@ -39,10 +40,10 @@ nav {
 }
 
 .lista {
-  color: #5e5a5a;
+  color: #000000c1;
   font-family: var(--fuenteAlternativa);
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 a {
@@ -84,6 +85,10 @@ a {
   height: 90vh;
 }
 
+.header--container {
+  background-color: rgba(248, 244, 244, .5);
+}
+
 .contenido-hero {
   /* background-color: rgba(248, 244, 244, .5); */
   width: 100%;
@@ -97,7 +102,7 @@ a {
 }
 
 .logo {
-  width: 45%;
+  width: 150px;
   margin-bottom: 10px;
 }
 
