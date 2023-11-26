@@ -1,8 +1,8 @@
 :root {
-  --principal: #1b6b3e;
-  --secundario: #25D366;
+  --principal: #0ca678;
+  --secundario: #12b886;
   --blanco: #fff;
-  --gris: #757575;
+  --gris: #343a40;
   --grisClaro: #dfe9f3;
   --negro: #000;
   --fuentePrincipal: 'Noto', sans-serif;
@@ -15,7 +15,7 @@ html {
 
 body {
   width: auto;
-  background-color: var(--grisClaro);
+  /* background-color: var(--grisClaro); */
 }
 
 *,
@@ -40,7 +40,7 @@ nav {
 }
 
 .lista {
-  color: #000000c1;
+  color: #343a40;
   font-family: var(--fuenteAlternativa);
   text-transform: uppercase;
   font-size: 16px;
@@ -69,7 +69,7 @@ a {
 }
 
 .container {
-  background-image: url(../img/img2.png);
+  background-image: url(../img/trabajador.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -86,11 +86,12 @@ a {
 }
 
 .header--container {
-  background-color: rgba(248, 244, 244, .5);
+  width: inherit;
+  background-color: rgba(248, 244, 244, .2);
+  height: 100vh;
 }
 
 .contenido-hero {
-  /* background-color: rgba(248, 244, 244, .5); */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -135,42 +136,70 @@ footer {
   background-color: var(--principal);
 }
 
-.campo{
+.campo {
   display: flex;
   flex-direction: column;
 }
-.contenedor-campos{
+
+.contenedor {
+  margin-bottom: 200px;
+}
+
+.contenedor-campos {
   width: 30rem;
   height: 15rem;
 }
-.boton-form{
+
+.boton-form {
   background-color: var(--principal);
   color: var(--blanco);
   padding: .5rem 2rem;
   border-radius: .7rem;
   text-transform: uppercase;
 }
-iframe{
+
+.logo-espalda {
+  width: 100%;
+  /* border-top-left-radius: 12px; */
+  /* height: auto; */
+}
+
+iframe {
   margin: 1rem;
   border-color: var(--negro);
   width: 100%;
   height: 23rem;
 }
-footer{
+
+footer {
 margin-top: 1rem;
 }
+
+.form {
+  display: grid;
+  /* width: 960px; */
+  margin: 30px;
+  grid-template-columns: 1.3fr 1fr;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
 #whatsapp {
    position: fixed;
    bottom: 20px;
    right:20px;
 }
+
 svg {
   width: 80px;
   filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
 }
+
 circle {
   fill: #25d366;
 }
+
 path {
   fill: #fff;
 }
@@ -183,24 +212,26 @@ ion-icon {
   margin-right: 5px;
 }
 
-.servicios{
+.servicios {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 5rem;
+  font-family: var(--fuenteAlternativa);
 }
 
-.card img{
+.card img {
   max-width: 50px;
  }
  
- .card {
+.card {
   border-radius: 15px;
   /* filter: drop-shadow(0 5px 10px 0 #ffffff); */
   width: 200px;
   height: 180px;
-  background-color: #75757521;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* background-color: #75757521; */
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -212,8 +243,11 @@ ion-icon {
   text-align: center;
 }
 
-
- 
+.card-title {
+  font-size: 18px;
+  max-width: 15ch;
+  color: var(--gris);
+}
 
 /*Para Celular*/
 @media(max-width: 600px) {
@@ -234,11 +268,9 @@ ion-icon {
   }
 
   .description {
-
     font-size: small;
     width: 12rem;
     height: 5rem;
-
 
   }
   .serv{
@@ -251,7 +283,7 @@ ion-icon {
     max-height: 80px;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #75757560;
+    /* background-color: #75757560; */
   }
 
 
@@ -267,7 +299,8 @@ ion-icon {
   }
   .serv{
     display: grid;
-    gap: 10px;
+    column-gap: 30px;
+    row-gap: 40px;
     grid-template-columns:repeat(5, 1fr);
   }
 
@@ -302,7 +335,7 @@ ion-icon {
     z-index: -1;
     top: -15px;
     right: -15px;
-    background: #1b6b3e;
+    background: var(--secundario);
     height:220px;
     width: 25px;
     border-radius: 32px;
