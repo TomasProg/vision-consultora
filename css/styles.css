@@ -52,7 +52,7 @@ a {
   text-decoration: none;
   font-family: var(--fuentePrincipal);
   font-weight: bold;
-  padding: 1rem;
+  padding: .9rem;
   color: var(--blanco);
 }
 
@@ -353,7 +353,7 @@ ion-icon {
   }
   
   .card:hover::before{
-    transition-delay:0.1s ;
+    transition-delay:0.01s ;
     transform: scale(40);
   }
 
