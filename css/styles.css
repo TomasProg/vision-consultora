@@ -106,8 +106,8 @@ a {
 
 .about-us-section {
   display: flex;
-  min-height: 80vh;
-  gap: 40px;
+  min-height: 70vh;
+  gap: 30px;
   margin: 30px;
   margin-bottom: 100px;
   padding: 2rem;
@@ -129,8 +129,9 @@ a {
   
 }
 .worker-img {
-  width: 600px;
+  width: 530px;
   height: auto;
+  border-radius: 12px;
 }
 
 /* .logo {
