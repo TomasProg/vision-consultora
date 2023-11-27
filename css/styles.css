@@ -124,8 +124,8 @@ a {
 
 .about-us-p {
   font-size: 24px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.7;
+  font-family: var(--fuenteAlternativa);
+  line-height: 1.8;
   
 }
 .worker-img {
