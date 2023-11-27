@@ -28,7 +28,7 @@ body {
 h1,
 h2 {
   font-family: var(--fuentePrincipal);
-  text-align: center;
+  /* text-align: center; */
 }
 
 
@@ -78,7 +78,7 @@ a {
   width: auto;
   position: relative;
   margin-top: 0;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .hero {
@@ -104,10 +104,39 @@ a {
   height: 420px;
 }
 
-.logo {
+.about-us-section {
+  display: flex;
+  min-height: 80vh;
+  gap: 40px;
+  margin: 30px;
+  margin-bottom: 100px;
+  padding: 2rem;
+  /* background-color: #087f5b; */
+  background-color: #099268;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.about-us-h2 {
+  font-size: 40px;
+}
+
+.about-us-p {
+  font-size: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  
+}
+.worker-img {
+  width: 600px;
+  height: auto;
+}
+
+/* .logo {
   width: 150px;
   margin-bottom: 10px;
-}
+} */
 
 footer {
   margin-top: 6rem;
@@ -161,10 +190,8 @@ footer {
   text-transform: uppercase;
 }
 
-.logo-espalda {
+.form-img {
   width: 100%;
-  /* border-top-left-radius: 12px; */
-  height: 500px;
 }
 
 iframe {
@@ -180,8 +207,7 @@ footer {
 
 .form {
   display: grid;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 50px;
   grid-template-columns: 1.15fr 1fr;
   justify-content: center;
   align-items: center;
