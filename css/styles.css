@@ -1,8 +1,8 @@
 :root {
-  --principal: #1b6b3e;
-  --secundario: #25D366;
+  --principal: #0ca678;
+  --secundario: #12b886;
   --blanco: #fff;
-  --gris: #757575;
+  --gris: #343a40;
   --grisClaro: #dfe9f3;
   --negro: #000;
   --fuentePrincipal: 'Noto', sans-serif;
@@ -15,7 +15,8 @@ html {
 
 body {
   width: auto;
-  background-color: var(--grisClaro);
+  color: var(--gris);
+  /* background-color: var(--grisClaro); */
 }
 
 *,
@@ -27,29 +28,31 @@ body {
 h1,
 h2 {
   font-family: var(--fuentePrincipal);
-  text-align: center;
+  /* text-align: center; */
 }
+
 
 nav {
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  background-color: rgba(69, 69, 69, 0.8);
   align-items: center;
-  width: auto;
+  /* width: auto; */
   gap: 20px;
 }
 
 .lista {
-  color: #5e5a5a;
+  color: #fff;
   font-family: var(--fuenteAlternativa);
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 a {
   text-decoration: none;
   font-family: var(--fuentePrincipal);
   font-weight: bold;
-  padding: 1rem;
+  padding: .9rem;
   color: var(--blanco);
 }
 
@@ -68,14 +71,14 @@ a {
 }
 
 .container {
-  background-image: url(../img/img2.png);
+  background-image: url(../img/trabajador.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   width: auto;
   position: relative;
   margin-top: 0;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .hero {
@@ -84,8 +87,13 @@ a {
   height: 90vh;
 }
 
+.header--container {
+  width: inherit;
+  background-color: rgba(248, 244, 244, .2);
+  height: 100vh;
+}
+
 .contenido-hero {
-  background-color: rgba(248, 244, 244, .5);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -96,13 +104,44 @@ a {
   height: 420px;
 }
 
-.logo {
-  width: 45%;
-  margin-bottom: 10px;
+.about-us-section {
+  display: flex;
+  min-height: 70vh;
+  gap: 30px;
+  margin: 30px;
+  margin-bottom: 100px;
+  padding: 1.8rem;
+  /* background-color: #087f5b; */
+  background-color: #099268;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.about-us-h2 {
+  font-size: 40px;
+}
+
+.about-us-p {
+  font-size: 24px;
+  font-family: var(--fuenteAlternativa);
+  line-height: 1.8;
+  
+}
+.worker-img {
+  width: 530px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* .logo {
+  width: 150px;
+  margin-bottom: 10px;
+} */
 
 footer {
   margin-top: 6rem;
+  border-bottom: 5px solid #0ca678;
 }
 
 .texto {
@@ -130,55 +169,118 @@ footer {
   background-color: var(--principal);
 }
 
-.sombra {
-  -webkit-box-shadow: 10px 10px 11px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 11px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 11px -4px rgba(0, 0, 0, 0.75);
-  border-radius: .8rem;
-  padding: 2rem;
-}
-.campo{
+.campo {
   display: flex;
   flex-direction: column;
 }
-.contenedor-campos{
+
+.contenedor {
+  margin-bottom: 200px;
+}
+
+.contenedor-campos {
   width: 30rem;
   height: 15rem;
 }
-.boton-form{
+
+.boton-form {
   background-color: var(--principal);
   color: var(--blanco);
   padding: .5rem 2rem;
   border-radius: .7rem;
   text-transform: uppercase;
 }
-iframe{
+
+.form-img {
+  width: 100%;
+}
+
+iframe {
   margin: 1rem;
   border-color: var(--negro);
   width: 100%;
   height: 23rem;
 }
-footer{
-margin-top: 1rem;
+
+footer {
+  margin-top: 1rem;
 }
+
+.form {
+  display: grid;
+  margin: 50px;
+  grid-template-columns: 1.15fr 1fr;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 #whatsapp {
    position: fixed;
    bottom: 20px;
    right:20px;
 }
+
 svg {
   width: 80px;
   filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
 }
+
 circle {
   fill: #25d366;
 }
+
 path {
   fill: #fff;
 }
 
 ion-icon {
   margin-right: 5px;
+}
+
+ion-icon {
+  margin-right: 5px;
+}
+
+.servicios {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  font-family: var(--fuenteAlternativa);
+}
+
+.serv-title-span {
+  color: var(--principal);
+}
+
+.card img {
+  max-width: 50px;
+ }
+ 
+.card {
+  border-radius: 15px;
+  /* filter: drop-shadow(0 5px 10px 0 #ffffff); */
+  width: 200px;
+  height: 180px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* background-color: #75757521; */
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 18px;
+  max-width: 15ch;
+  color: var(--gris);
 }
 
 /*Para Celular*/
@@ -200,27 +302,22 @@ ion-icon {
   }
 
   .description {
-
     font-size: small;
     width: 12rem;
     height: 5rem;
 
-
   }
-
-  .card {
-    padding: 2rem;
-    background-color: var(--grisClaro);
-    align-items: center;
-    margin: .2rem;
-  }
-
-  .cards {
+  .serv{
     display: grid;
-    gap: 5px;
-    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-template-columns: 1fr; 
+  } 
 
-
+  .card{
+    max-height: 80px;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background-color: #75757560; */
   }
 
 
@@ -234,13 +331,11 @@ ion-icon {
     column-gap: 2rem;
     height: auto;
   }
-
-  .card {
-    display: flex;
-    align-items: center;
-    background-color: var(--blanco);
-    box-sizing: border-box;
-
+  .serv{
+    display: grid;
+    column-gap: 30px;
+    row-gap: 40px;
+    grid-template-columns:repeat(5, 1fr);
   }
 
   .cards {
@@ -268,6 +363,62 @@ ion-icon {
     
   }
 
+  .card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -15px;
+    right: -15px;
+    background: var(--secundario);
+    height:220px;
+    width: 25px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: 0.5s;
+    
+  }
+  
+  .card:hover::before{
+    transition-delay:0.01s ;
+    transform: scale(40);
+  }
 
+  /* La otra animacion */
+  /* .card::before,
+  .card::after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+
+    background-color: var(--principal);
+    transition: 0.5s;
+  }
+
+  .card::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+  }
+
+  .card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+  }
+
+  .card:hover::before,
+  .card:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+  } */
 
 }
