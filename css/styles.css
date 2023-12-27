@@ -2,8 +2,8 @@
   --principal: #0ca678;
   --secundario: #12b886;
   --blanco: #fff;
-  --gris: #343a40;
-  --grisClaro: #dfe9f3;
+  --gris: #474848;
+  --grisClaro: #d1dce6;
   --negro: #000;
   --fuentePrincipal: 'Noto', sans-serif;
   --fuenteAlternativa: 'Segoe UI', Tahoma, sans-serif;
@@ -16,7 +16,7 @@ html {
 body {
   width: auto;
   color: var(--gris);
-  /* background-color: var(--grisClaro); */
+  overflow-x: hidden;
 }
 
 *,
@@ -31,29 +31,50 @@ h2 {
   /* text-align: center; */
 }
 
-
-nav {
+/* .container {
+  background-size: cover;
+  aspect-ratio: 3/2; 
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 100px;
+   object-fit: contain; 
+}  */
+.container {
+  display: block;
+  height: 100vh; 
+  width: auto;
+  background-color: var(--grisClaro)
+   
+}
+.logonav{
   display: flex;
-  justify-content: center;
-  background-color: rgba(69, 69, 69, 0.8);
+  justify-content: space-between;
+}
+.vc{
+  width: 15%;
+}
+.logo {
+  width: 100%;
+  margin-left: 7%;
+}
+.nav {
+  margin: 1rem 0 1rem 1rem;
+  border-radius: .5rem;
+  display: flex;
+  background-color: var(--gris);
   align-items: center;
-  /* width: auto; */
-  gap: 20px;
-}
+  height: 3rem;
 
+  
+}
 .lista {
-  color: #fff;
-  font-family: var(--fuenteAlternativa);
-  text-transform: uppercase;
-  font-size: 16px;
-}
-
-a {
-  text-decoration: none;
-  font-family: var(--fuentePrincipal);
-  font-weight: bold;
-  padding: .9rem;
   color: var(--blanco);
+  font-family: var(--fuentePrincipal);
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: .9rem;
 }
 
 .boton:hover,
@@ -61,53 +82,67 @@ a {
   background-color: var(--secundario);
 }
 
-.boton {
-  background-color: var(--principal);
-  color: var(--blanco);
-  padding: 1rem 4rem;
-  border-radius: .7rem;
-  text-transform: uppercase;
-
-}
-
-.container {
-  background-image: url(../img/trabajador.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: auto;
+/*---Imagenes de slide automatico*/
+.slide {
+  width: 100%;
+  height: 2000px; /* ajusta la altura según tus necesidades */
   position: relative;
-  margin-top: 0;
-  margin-bottom: 100px;
+  background-size: cover; /* cubrir todo el contenedor */
+  background-position: center; /* centrar la imagen */
+  display: flex;
+  justify-content: space-between; /* espacio entre las imágenes */
+  position: relative;
+  object-fit: cover;
+  
+}
+.image1, .image2, .image3 {
+  
+  width: 100% ;
+  height:  100%;
+  background-repeat: no-repeat;
+  background-size: contain
+  
 }
 
-.hero {
+.image1 {
+  flex: 0 0 100%; 
+  background-image: url('../img/trabajador.jpg');
+    
+}
+.image2 {
+  flex: 0 0 100%;
+  background-image: url('../img/img2.png');
+}
+.image3 {
+  flex: 0 0 100%;
+  background-image: url('../img/capacitaciones1.jpg');
+}
+  
+
+/*------------------------------------*/
+/* .hero {
   display: grid;
   place-items: center;
   height: 90vh;
-}
+} */
 
-.header--container {
-  width: inherit;
-  background-color: rgba(248, 244, 244, .2);
-  height: 100vh;
-}
 
-.contenido-hero {
+/*.contenido-hero {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   /* position: absolute; */
-  /* width: 100%; */
+  /* width: 100%; 
   height: 420px;
-}
+}*/
 
 .about-us-section {
   display: flex;
   min-height: 70vh;
   gap: 30px;
+  margin-top: 500px;
   margin: 30px;
   margin-bottom: 100px;
   padding: 1.8rem;
@@ -134,10 +169,6 @@ a {
   border-radius: 12px;
 }
 
-/* .logo {
-  width: 150px;
-  margin-bottom: 10px;
-} */
 
 footer {
   margin-top: 6rem;
@@ -153,7 +184,7 @@ footer {
   align-content: end;
   margin-top: 3rem;
   margin-bottom: 1rem;
-
+  
 }
 
 .parrafoSeccion {
@@ -183,6 +214,13 @@ footer {
   height: 15rem;
 }
 
+.boton {
+  background-color: var(--principal);
+  color: var(--blanco);
+  padding: 1rem 4rem;
+  border-radius: .7rem;
+  text-transform: uppercase;
+}
 .boton-form {
   background-color: var(--principal);
   color: var(--blanco);
