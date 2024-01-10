@@ -13,184 +13,498 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
     <header class="container">
-        <div class="logonav">
-            <div class="vc">
-                <img class="logo" src="img/new-logo.png" alt="logoConsultoría">
-            </div>
+        <div class="logonav"><!--id="navbar" -->
+            <img class="marca" src="./img/logo horizontal sin desc.png" alt="logoConsultoría">
+            <div class="nav"></div>
+            <nav>
+                <ul>
+                    <li><a class="lista" href="./index.html" style= "border-bottom: 3px solid var(--principal);"><ion-icon name="home-sharp"></ion-icon> Inicio</a>
+                    </li>
+                    <li><a class="lista" href="./servicios.html"><ion-icon name="clipboard-sharp"></ion-icon>
+                            Servicios</a>
+                    </li>
+                    <li><a class="lista" href="#"><ion-icon name="bag-handle-sharp"></ion-icon> Productos▼</a>
+                        <ul>
+                            <li><a class="lista" href="./cursos.html">Cursos</a></li>
+                            <li><a class="lista" href="./epp.html">E.P.P.</a></li>
+                            <li><a class="lista" href="productos.html">Producto 2</a></li>
 
-            <div class="nav">
-                <nav>
-                    <a class="lista" href="#"><ion-icon name="home-sharp"></ion-icon> Inicio</a>
-                    <a class="lista" href="#"><ion-icon name="clipboard-sharp"></ion-icon> Servicios</a>
-                    <a class="lista" href="#"><ion-icon name="bag-handle-sharp"></ion-icon> Productos</a>
-                    <a class="lista" href="#"><ion-icon name="star-sharp"></ion-icon> Sobre Nosotros</a>
-                    <a class="lista" href="#"><ion-icon name="mail-open-sharp"></ion-icon> Contactar</a>
-                </nav>
-            </div>
+                        </ul>
+                    </li>
+                    <li><a class="lista" href="./index.html#nosotros"><ion-icon name="star-sharp"></ion-icon> Sobre
+                            Nosotros</a>
+                    </li>
+                    <li><a class="lista contact" href="#footer"><ion-icon name="mail-open-sharp"></ion-icon>
+                            Contactar</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
         <div class="slide">
-            <div class="image1"></div>
-            <div class="image2"></div>
-            <div class="image3"></div>
-            <!-- <img class="logo" src="img/new-logo.png" alt="logoConsultoría">
-            <h2>Mar del Plata, Buenos Aires</h2> -->
+            <div class="image1"><span class="propagandas">Evite infracciones a su empresa</span><p>Mantenemos la documentación legal necesaria para prevenir multas de Organismos de Control</p></div>
+            <div class="image2"><span class="propagandas">Reduzcan los accidentes en su empresa</span><p>Trabajamos para disminuir la cantidad de accidentes y salir de Programas de Reducción de Siniestralidad. Con un plan detallado y definido por profesionales que lo llevan adelante.</p></div>
+            <div class="image3"><span class="propagandas">Mantenga a su personal capacitado</span><p>Definimos un Programa de capacitaciones acorde a las necesidades de tu empresa, a fin de que el personal se mantenga alineado con las políticas y responda en base a sus requerimientos.</p></div>
         </div>
     </header>
-
-    <div class="about-us-section">
-        <div class="text-box">
+    <!-- -------Acerca de Nosotros--------- -->
+    <div class="about-us-section" id="nosotros">
+        <div class="text-box sombra">
             <h2 class="about-us-h2">¿Quiénes somos?</h2>
             <p class="about-us-p">
                 Somos un grupo de profesionales que acompaña a sus clientes en el crecimiento diario, adaptándonos a sus
                 necesidades y trabajando en conjunto. Prestamos diferentes servicios y colaboramos a que las empresas
                 consigan su mejor versión, con asesoramiento constante.</p>
+            <h2 class="about-us-h2">¿Por qué elegirnos?</h2>
+            <p class="about-us-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, laborum a quos obcaecati eveniet tempore
+                reprehenderit quam explicabo tempora non quidem. Temporibus sint architecto animi vel, sed vitae dolore
+                incidunt.</p>
+
         </div>
-        <img src="img/trabajador2.jpg" class="worker-img" alt="">
+        <img src="img/trabajador2.jpg" class="worker-img" alt="Trabajador">
 
     </div>
-    <div class="contenedor">
+
+    <!-- ---------Servicios------- -->
+    <div class="fondo">
         <div id="servicios" class="servicios">
-            <h1>Servicios en <span class="serv-title-span">SEGURIDAD, HIGIENE Y MEDIO AMBIENTE</span></h1>
+            <h1>Servicios </h1>
             <div class="serv">
-                <div class="card">
-                    <img src="./img/seguridad.png" alt=Higiene">
-                    <h3 class="card-title">
-                        Higiene y Seguridad en el Trabajo
-                    </h3>
+                <!-- inicio tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard1">
+                        <img src="./img/seguridad.png" alt="Higiene">
+                        <h3 class="card-title">
+                            Higiene y seguridad laboral
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal1">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal1')">&times;</span>
+                            <h2>Higiene y seguridad laboral</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard2">
+                        <img src="./img/tierra.png" alt="Medio Ambiente">
+                        <h3 class="card-title">
+                            Medio ambiente
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal2">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal2')">&times;</span>
+                            <h2>Medio ambiente</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard3">
+                        <img src="./img/medioambiente.png" alt="Impacto ambiental">
+                        <h3 class="card-title">
+                            Estudios de impacto ambiental
+                        </h3>
 
+                    </div>
+                    <div class="face back" id="modal3">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal3')">&times;</span>
+                            <h2>Estudios de impacto ambiental</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./img/medioambiente.png" alt="Medio Ambiente">
-                    <h3 class="card-title">
-                        Medio Ambiente
-                    </h3>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard4">
+                        <img src="./img/empresa.png" alt="Empresa">
+                        <h3 class="card-title">
+                            Habilitaciones
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal4">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal4')">&times;</span>
+                            <h2>Habilitaciones</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./img/empresa.png" alt="Empresa">
-                    <h3 class="card-title">
-                        Habilitaciones para empresas
-                    </h3>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard5">
+                        <img src="./img/profesional.png" alt="Asesorias">
+                        <h3 class="card-title">
+                            Asesoramiento
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal5">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal5')">&times;</span>
+                            <h2>Asesoramiento</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./img/capacitacion.png" alt="Capacitaciones">
-                    <h3 class="card-title">
-                        Capacitaciones
-                    </h3>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard6">
+                        <img src="./img/document.png" alt="Documentación">
+                        <h3 class="card-title">
+                            Cobertura legal
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal6">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal6')">&times;</span>
+                            <h2>Cobertura legal</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./img/asesorias.png" alt="Asesorias">
-                    <h3 class="card-title">
-                        Asesoramiento
-                    </h3>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard7">
+                        <img src="./img/certificado-de-garantia.png" alt="certificaciones">
+                        <h3 class="card-title">
+                            Certificaciones
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal7">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal7')">&times;</span>
+                            <h2>Certificaciones</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="/img/inspeccion.png" alt="Inspecciones">
-                    <h3 class="card-title">
-                        Inspecciones de organismos de control
-                    </h3>
-
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard8">
+                        <img src="./img/auditoria.png" alt="Auditoria">
+                        <h3 class="card-title">
+                            Auditorías externas a empresas
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal8">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal8')">&times;</span>
+                            <h2>Auditorias externas a empresas</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="/img/document.png" alt="Documentación">
-                    <h3 class="card-title">
-                        Documentación Legal
-                    </h3>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard9">
+                        <img src="./img/martillo-neumatico.png" alt="Ruido">
+                        <h3 class="card-title">
+                            Mediciones de ruidos
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal9">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal9')">&times;</span>
+                            <h2>Mediciones de ruidos</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./img/siniestros.png" alt="Siniestros">
-                    <h3 class="card-title">
-                        Reducción de siniestralidad
-                    </h3>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard10">
+                        <img src="./img/bombilla.png" alt="Iluminacion">
+                        <h3 class="card-title">
+                            Mediciones de iluminación
+                        </h3>
+                    </div>
+                    <div class="back face" id="modal10">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal10')">&times;</span>
+                            <h2>Mediciones de iluminacion</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./img/art.png" alt="ART">
-                    <h3 class="card-title">
-                        Contacto directo con la ART
-                    </h3>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard11">
+                        <img src="./img/corriente-electrica.png" alt="Tierra">
+                        <h3 class="card-title">
+                            Mediciones de puesta a tierra
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal11">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal11')">&times;</span>
+                            <h2>Mediciones de puesta a tierra</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./img/incendios.png" alt="Incendios">
-                    <h3 class="card-title">
-                        Redes de incendio
-                    </h3>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard12">
+                        <img src="./img/ergonomia.png" alt="ergonomia">
+                        <h3 class="card-title">
+                            Estudios ergonómicos
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal12">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal12')">&times;</span>
+                            <h2>Estudios ergonómicos</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
                 </div>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard13">
+                        <img src="./img/familia.png" alt="cobertura-tecnica">
+                        <h3 class="card-title">
+                            Cobertura técnica
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal13">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal13')">&times;</span>
+                            <h2>Cobertura técnica</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front" id="miCard14">
+                        <img src="./img/organismo-control.png" alt="organismo-control">
+                        <h3 class="card-title">
+                            Sobrellevamos inspecciones de organismos de control
+                        </h3>
+                    </div>
+                    <div class="face back" id="modal14">
+                        <div class="back2">
+                            <span class="close" onclick="cerrarModal('modal14')">&times;</span>
+                            <h2>Sobrellevamos inspecciones de organismos de control</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illum, nisi natus atque
+                                corporis
+                                molestias officia dolore, vero quae quo fugit illo! Reiciendis temporibus id non, facere
+                                sapiente tempora sint.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin tarjeta -->
             </div>
         </div>
+        <!-- ----------------inicio del formulario-------------------- -->
+        <div class="form2">
 
-    </div>
-    <div class="form">
-        <section>
-            <h2>Contacto</h2>
-            <form class="formulario">
+            <h2>¿En qué te podemos ayudar?</h2>
+            <form class="formulario2">
                 <fieldset>
-                    <legend>Contactenos llenando el formulario</legend>
-                    <div class="contenedor-campos">
-
-                        <div class="campo">
+                    <div class="contenedor-campos2">
+                        <div class="campo2">
                             <label>Nombre</label>
                             <input class="input-text" type="text" placeholder="Indique su nombre" required>
                         </div>
 
-                        <div class="campo">
+                        <div class="campo2">
                             <label>Telefono</label>
                             <input class="input-text" type="tel" placeholder="Indique su telefono" required>
                         </div>
 
-                        <div class="campo">
+                        <div class="campo2">
                             <label>E-mail</label>
                             <input class="input-text" type="email" placeholder="Agregue direccion de Email" required>
                         </div>
-                        <div class="campo">
+                        <div class="campo2">
                             <label>Mensaje</label>
-                            <textarea class="input-text" placeholder="Comentarios"></textarea>
-                            
+                            <textarea class="input-text" cols="7" rows="" placeholder="Comentarios"></textarea>
                         </div>
 
                     </div>
-                    <div class="alinear-derecha-flex">
-                        <input class="boton-form boton" type="submit" value="Enviar">
-
+                    <div class="alinear-derecha-flex2">
+                        <input class="boton2" type="submit" value="Enviar">
 
                     </div>
                 </fieldset>
             </form>
 
-        </section>
-        <div>
-            <img src="img/form-img.jpg" class="form-img" alt="">
+
+
         </div>
+
+        <!-- Formulario Pc -->
+        <div class="contenedor modal">
+            <form class="sombra form">
+
+                <fieldset class="fieldset">
+                    <legend class="legend">¿En qué te podemos ayudar?</legend>
+
+                    <div class="inputbox">
+                        <label>
+                            <input type="text" name='name' class="input" placeholder=" " required>
+                            <span class="span"><ion-icon name="list"></ion-icon> Ingrese su nombre:</span>
+                        </label>
+                    </div>
+
+                    <div class="inputbox">
+                        <label>
+                            <input type="text" name='name' class="input" placeholder=" " required>
+                            <span class="span"><ion-icon name="mail"></ion-icon> Ingrese su e-mail:</span>
+                        </label>
+                    </div>
+
+                    <div class="inputbox">
+                        <label>
+                            <input type="text" name='name' class="input" placeholder=" " required>
+                            <span class="span"><ion-icon name="call"></ion-icon> Ingrese su teléfono:</span>
+                        </label>
+                    </div>
+
+                    <div class="textarea">
+                        <textarea class="inputbox" name="coments" id="" cols="" rows=""
+                            placeholder="Haga su consulta"></textarea>
+                    </div>
+
+                    <div class="boton">
+                        <input class="button" name="register" type="submit" value="Enviar consulta">
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- ------------------------------ Nuestros Clientes--------------------------- -->
+        <section>
+            <h1>Nos acompañan <span class="serv-title-span">nuestros clientes</span></h1>
+            <div class="banner-container">
+                <div class="banner">
+                    <!-- Logotipos -->
+                    <div class="logo"><img src="./logos/1agrality.png" alt="Logo 1"></div>
+                    <div class="logo"><img src="./logos/2Transervice.jpg" alt="Logo 2"></div>
+                    <div class="logo"><img src="./logos/3club nautico.png" alt="Logo 3"></div>
+                    <div class="logo"><img src="./logos/4labweston.png" alt="Logo 4"></div>
+                    <div class="logo"><img src="./logos/5HSBC-Fuente.jpg" alt="Logo 5"></div>
+                    <div class="logo"><img src="./logos/6naranja.png" alt="Logo 6"></div>
+                    <div class="logo"><img src="./logos/7UthgraDelMar.png" alt="Logo 7"></div>
+                    <div class="logo"><img src="./logos/8sasso.png" alt="Logo 8"></div>
+                    <div class="logo"><img src="./logos/9peron.png" alt="Logo 9"></div>
+                    <div class="logo"><img src="./logos/10recfimar.png" alt="Logo 10"></div>
+                    <div class="logo"><img src="./logos/11Propeller.png" alt="Logo 11"></div>
+                    <div class="logo"><img src="./logos/12Calsa.png" alt="Logo 12"></div>
+                    <div class="logo"><img src="./logos/13coiron.png" alt="Logo 13"></div>
+                    <div class="logo"><img src="./logos/14goottschalk.png" alt="Logo 14"></div>
+                    <div class="logo"><img src="./logos/15inprope.png" alt="Logo 15"></div>
+                    <div class="logo"><img src="./logos/16Bergamin.png" alt="Logo 16"></div>
+                    <!-- ... Agrega los demás logotipos -->
+                </div>
+                <button class="prev-btn">&lt;</button>
+                <button class="next-btn">&gt;</button>
+            </div>
+        </section>
+
+        <!---------------------- Videos con iformacion importante ------------------------->
+        <!-- <div class="pantalla">
+            <h1>Algunas de <span class="serv-title-span">nuestras tareas</span></h1>
+
+            <div class="video-container">
+                <div class="video-wrapper sombra">
+                    <video class="video" controls src="./img/VideoCapacitacion.mp4" loop>
+                    </video>
+                    <div class="video-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+                <div class="video-wrapper">
+                    <video class="video" controls src="./img/VideoCursoAutoelevador.mp4" loop></video>
+                    <div class="video-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+                <div class="video-wrapper">
+                    <video class="video" controls src="./img/VideoGrua.mp4" loop></video>
+                    <div class="video-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+            </div>
+        </div> -->
+        <footer id="footer">
+            <div class="contactos">
+                <h1>Contactanos</h1>
+
+
+                <h3>Cel: 291-4267630 / 223-5470601</h3>
+
+                <h3>Mail: <a href="mailto:visioncjg@gmail.com">visioncjg@gmail.com</a> </h3>
+
+                <a href="https://www.facebook.com/visionconsultoria.mdq"> <img class="redes"
+                        src="./img/facebook_logo_icon_181742.png" alt="logo-facebook"></a>
+                <a href="https://www.instagram.com/visionconsultoria.mdq"> <img class="redes"
+                        src="./img/instagram_logo_icon_181738.png" alt="logo-instagram"></a>
+                <a href="https://www.linkedin.com/company/visionconsultoria-hys/"><img class="redes"
+                        src="./img/linkedin_logo_icon_181743.png" alt="logo-linkedin"></a>
+                
+            </div>
+
+
+            <p>Todos los derechos Reservados - 2023©</p>
+
+    </div>
+    </footer>
+    <div class="hogar">
+        <a href="#"><img class="hogarcito" src="./img/home-outline.png" alt="Casita a inicio"></a>
     </div>
 
-    <footer>
-        <a class="redes" href="https://www.facebook.com/visionconsultoria.mdq"> <img src="./img/facebook.png"
-                alt="logo-facebook"></a>
-        <a class="redes" href="https://www.instagram.com/visionconsultoria.mdq"> <img src="./img/Instagram.png"
-                alt="logo-instagram"></a>
-        <a class="redes" href="https://www.linkedin.com/company/visionconsultoria-hys/"><img src="./img/Linkedin.png"
-                alt="logo-linkedin"></a>
-        <p>Todos los derechos Reservados - 2023©</p>
 
-    </footer>
     <div id="whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=%2B542914267630&data=ARCvtP75wZNXi4XU_j7RK3YGA-o4OMjCqAJCNbEVWV_R3IFSQfGBi_10lSaXHbtvysRQLLZS29xNs1oGHtoQYIcx-n6OwG-CYRC3ovLprH4iRj-YXzbhmCk7KkEsmv57_kFcKPkCLSfs8B-K0ah7AXg&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR13fJX99Lj4wEGLp7NcIEfQG1QCs-ttcXh6uvIQCSHTWj4Vn6OHYbfPDBI"
-            target="_blank">
-            <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
-                <g class="layer">
-                    <title>Layer 1</title>
-                    <circle cx="40" cy="40" fill="#fff" id="svg_1" r="38" stroke="#000000" stroke-width="0" />
-                    <path
-                        d="m57.81072,21.975c-4.48928,-4.5 -10.46786,-6.975 -16.82142,-6.975c-13.11429,0 -23.78571,10.67143 -23.78571,23.78571c0,4.18928 1.09286,8.28215 3.17143,11.89286l-3.375,12.32142l12.61072,-3.31072c3.47143,1.89642 7.38215,2.89286 11.36786,2.89286l0.01072,0c13.10358,0 24.01072,-10.67143 24.01072,-23.78571c0,-6.35357 -2.7,-12.32142 -7.18928,-16.82142l-0.00001,-0.00001l-0.00001,0l-0.00002,0.00001zm-16.82142,36.6c-3.55714,0 -7.03928,-0.95357 -10.07143,-2.75357l-0.71785,-0.42857l-7.47858,1.96072l1.99286,-7.29642l-0.47143,-0.75c-1.98215,-3.15 -3.02142,-6.78215 -3.02142,-10.52142c0,-10.89642 8.87143,-19.76786 19.77858,-19.76786c5.28215,0 10.24286,2.05714 13.97143,5.79642c3.72857,3.73928 6.02142,8.7 6.01072,13.98215c0,10.90714 -9.09642,19.77858 -19.99286,19.77858l0,-0.00002l-0.00001,0l-0.00001,-0.00001zm10.84286,-14.80714c-0.58928,-0.3 -3.51429,-1.73572 -4.06072,-1.92857c-0.54643,-0.20358 -0.94286,-0.3 -1.33928,0.3c-0.39642,0.6 -1.53214,1.92857 -1.88571,2.33572c-0.34286,0.39642 -0.69642,0.45 -1.28571,0.15c-3.49286,-1.74643 -5.78571,-3.11785 -8.08928,-7.07143c-0.61072,-1.05 0.61072,-0.975 1.74643,-3.24643c0.19286,-0.39642 0.09642,-0.73928 -0.05357,-1.03928c-0.15,-0.3 -1.33928,-3.225 -1.83214,-4.41429c-0.48215,-1.15714 -0.975,-0.99642 -1.33928,-1.01785c-0.34286,-0.02142 -0.73928,-0.02142 -1.13572,-0.02142c-0.39642,0 -1.03928,0.15 -1.58571,0.73928c-0.54643,0.6 -2.07858,2.03572 -2.07858,4.96072c0,2.925 2.13214,5.75357 2.42142,6.15c0.3,0.39642 4.18928,6.39642 10.15714,8.97858c3.77143,1.62857 5.25,1.76786 7.13572,1.48928c1.14643,-0.17143 3.51429,-1.43572 4.00714,-2.82857c0.49286,-1.39286 0.49286,-2.58215 0.34286,-2.82857c-0.13928,-0.26786 -0.53572,-0.41785 -1.125,-0.70714l-0.00001,-0.00001l0.00002,-0.00001l-0.00002,-0.00001z"
-                        fill="currentColor" id="svg_2" />
-                </g>
-            </svg>
-        </a>
+        <a href="https://wa.me/5492914267630" target="_blank" class="whatsapp-container"><img
+                src=".//img/whatsapp_logo_icon_257004.png" class="icono-wsp" alt="iconoWsp"></a>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

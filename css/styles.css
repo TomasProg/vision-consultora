@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --principal: #0ca678;
   --secundario: #12b886;
@@ -5,458 +13,1063 @@
   --gris: #474848;
   --grisClaro: #d1dce6;
   --negro: #000;
-  --fuentePrincipal: 'Noto', sans-serif;
+  --fuentePrincipal: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   --fuenteAlternativa: 'Segoe UI', Tahoma, sans-serif;
+  --transparencia: rgba(255, 255, 255, 0.7);
+  --transparencia2: rgba(0, 0, 0, 0.2);
 }
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  /*Scroll suavizado en la navbar*/
+
 }
 
 body {
   width: auto;
   color: var(--gris);
   overflow-x: hidden;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+  font-family: var(--fuentePrincipal);
 }
 
 h1,
 h2 {
   font-family: var(--fuentePrincipal);
-  /* text-align: center; */
+
 }
 
-/* .container {
-  background-size: cover;
-  aspect-ratio: 3/2; 
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 100px;
-   object-fit: contain; 
-}  */
-.container {
-  display: block;
-  height: 100vh; 
-  width: auto;
-  background-color: var(--grisClaro)
-   
+.sombra {
+  -webkit-box-shadow: 10px 10px 11px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 11px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 11px -4px rgba(0, 0, 0, 0.75);
+  border-radius: .8rem;
+  padding: 2rem;
+
 }
-.logonav{
+
+/*-----------------WHATSAPP -----------------------*/
+
+#whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+}
+
+.icono-wsp {
+  height: 50px;
+  width: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+
+}
+.serv-title-span {
+  color: var(--principal);
+}
+
+/*------------------Inicio Barra Navegacion (Pc)---------------------------*/
+
+
+/* #navbar {
+  position: relative;
+  
+  transition: top 0.3s; 
+}
+
+#navbar.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+} */
+
+.logonav {
+  position: absolute;
+  width: 100%;
+  min-height: 66px;
+  background-color: var(--grisClaro);
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
-}
-.vc{
-  width: 15%;
-}
-.logo {
-  width: 100%;
-  margin-left: 7%;
-}
-.nav {
-  margin: 1rem 0 1rem 1rem;
-  border-radius: .5rem;
-  display: flex;
-  background-color: var(--gris);
   align-items: center;
-  height: 3rem;
-
-  
 }
-.lista {
-  color: var(--blanco);
-  font-family: var(--fuentePrincipal);
+
+.marca {
+  width: 130px;
+  margin-left: 0%;
+ 
+ 
+}
+
+ion-icon {
+  margin-right: 5px;
+}
+
+header ul {
+  position: relative;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+  float: left;
+}
+
+header ul li a {
+  color: var(--principal);/*Letras del navbar*/
+  font: 2ch sans-serif;
+  padding:15px 20px;
   text-transform: uppercase;
-  font-size: 15px;
-  font-weight: bolder;
   text-decoration: none;
-  padding: .9rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+
+}
+.lista::before,
+.lista::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--principal);
+    transform: scaleX(0);
+    transition: transform 0.5s;
 }
 
-.boton:hover,
-.lista:hover {
-  background-color: var(--secundario);
+.lista::before {
+    top: -1px;
+    transform-origin: left;
 }
+
+.lista::after {
+    bottom: 0px;
+    transform-origin: right;
+}
+
+.lista:hover::after,
+.lista:hover::before,
+.active::before,
+.active::after {
+    transform: scaleX(1);
+}
+
+
+/* .lista:hover {
+  background-color: var(--transparencia);
+  border-radius: .5rem;
+  color: var(--principal);
+} */
+
+header ul li ul {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: var(--grisClaro);
+  display: none;
+}
+
+header ul li:hover ul {
+  display: block;
+}
+
+header ul li ul li {
+  /*Esto es el submenu*/
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--transparencia2);
+  text-align: center;
+}
+
+/*------------------Fin Barra Navegacion (Pc)-------------------------------*/
+
+/*------------------Inicio Barra Naavegacion  (Movil)------------------------*/
+@media(max-width: 425px) {
+  .marca {
+    width: 100px;
+    margin-left: 0%;
+    background-color: var(--transparencia);
+    border-radius: .5rem;
+  }
+
+  .logonav {
+    padding: 10px 20px;
+    min-height: 70px;
+  }
+
+  .logonav nav {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    background-color: var(--principal);
+    display: none;
+    z-index: 1;
+
+  }
+
+  .logonav nav ul li {
+    width: 100%;
+
+  }
+
+  .logonav nav ul li {
+    width: 100%;
+    float: left;
+
+  }
+
+  .logonav nav ul li ul {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  .logonav nav ul li:hover {
+    background-color: aqua;
+  }
+
+  header ul li a {
+    color: var(--blanco);
+    font-size: 1em;
+    padding: 20px 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+
+  }
+
+  /*Boton Navegacion*/
+  .nav {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--transparencia);
+    padding: -10rem;
+    border-radius: .5rem;
+  }
+
+  .nav::before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    background-color: var(--negro);
+    transform: translateY(-10px);
+    box-shadow: 0 10px var(--negro);
+  }
+
+  .nav::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    background-color: var(--negro);
+    transform: translateY(10px);
+  }
+
+  .active .nav::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  .active .nav::after {
+    transform: rotate(315deg);
+  }
+
+  header .active nav {
+    display: initial;
+  }
+
+  /*Fin Boton Navegacion*/
+
+}
+
+/*------------------Fin Barra Naavegacion  (Movil)--------------------------*/
+
+
+/*--------------Inicio imagenes (Movil)-----------------------------*/
 
 /*---Imagenes de slide automatico*/
 .slide {
-  width: 100%;
-  height: 2000px; /* ajusta la altura según tus necesidades */
-  position: relative;
-  background-size: cover; /* cubrir todo el contenedor */
-  background-position: center; /* centrar la imagen */
   display: flex;
-  justify-content: space-between; /* espacio entre las imágenes */
-  position: relative;
+  height: 100vh;
+  background-size: cover;
+  /* cubrir todo el contenedor */
+  background-position: center;
+  /* centrar la imagen */
+  justify-content: space-between;
+  /* espacio entre las imágenes */
+  position: absolute;
+  /*Pongo este Div por detras*/
   object-fit: cover;
-  
+  margin-top: 66px;
+
+
 }
-.image1, .image2, .image3 {
-  
-  width: 100% ;
-  height:  100%;
+
+.image1,
+.image2,
+.image3 {
+  display: flex;
+  background-position: top center;
   background-repeat: no-repeat;
-  background-size: contain
-  
+  background-size: contain;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  align-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.propagandas, .slide div p {
+  text-transform: uppercase;
+  background-color: var(--gris);
+  font-family: var(--fuentePrincipal);
+  /* font-size: xx-large; */
+  /* margin-bottom: 5%; */
+  /* border-radius: .5rem; */
+  /* width: 10%; */
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-decoration: none;
+  /* text-align: center; */
+  overflow: hidden;
+  /*con esto evito que el texto se salga del background-color*/
+  max-width: 80%;
+  align-self: flex-end;
 }
 
 .image1 {
-  flex: 0 0 100%; 
+  flex: 0 0 100%;
   background-image: url('../img/trabajador.jpg');
-    
+
 }
+
 .image2 {
   flex: 0 0 100%;
   background-image: url('../img/img2.png');
 }
+
 .image3 {
   flex: 0 0 100%;
   background-image: url('../img/capacitaciones1.jpg');
 }
-  
 
-/*------------------------------------*/
-/* .hero {
-  display: grid;
-  place-items: center;
-  height: 90vh;
-} */
+/*----------------------Fin imagenes (Movil)----------------------------------------*/
+
+/*----------------------Inicio Imagenes Para Pcs------------------------------------*/
+@media(min-width: 768px) {
+
+  /*---Imagenes de slide automatico*/
+  .slide {
+    margin-top: 66px;
+    display: flex;
+    height: 100%;
+    background-size: cover;
+    /* cubrir todo el contenedor */
+    background-position: center;
+    /* centrar la imagen */
+    justify-content: space-between;
+    /* espacio entre las imágenes */
+    position: absolute;
+    /*Pongo este Div por detras*/
+    object-fit: cover;
+    z-index: -1;
+
+  }
+
+  .image1,
+  .image2,
+  .image3 {
+    display: flex;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: flex-end;
+    justify-content: center;
+    width: auto;
+  }
+
+  .propagandas {
+    text-transform: uppercase;
+    background-color: var(--gris);
+    font-family: var(--fuentePrincipal);
+    font-size: xx-large;
+    margin-bottom: 5%;
+    border-radius: .5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align: center;
+    overflow: hidden;
+    /*con esto evito que el texto se salga del background-color */
+    max-width: 900px;
+  }
+}
+
+/*----------------------Fin de Imagenes para PC----------------------*/
 
 
-/*.contenido-hero {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  /* position: absolute; */
-  /* width: 100%; 
-  height: 420px;
-}*/
+
+/*----------------------------Inicio---quienes somos-(Movil)---------------------------------*/
+
 
 .about-us-section {
+  border-top: 5px solid var(--principal);
   display: flex;
   min-height: 70vh;
   gap: 30px;
-  margin-top: 500px;
-  margin: 30px;
-  margin-bottom: 100px;
   padding: 1.8rem;
-  /* background-color: #087f5b; */
-  background-color: #099268;
-  border-radius: 12px;
+  background-image: url(../img/trabajador2.jpg);
+  background-position: center center;
+  background-size: cover;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.text-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .about-us-h2 {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .about-us-p {
-  font-size: 24px;
-  font-family: var(--fuenteAlternativa);
+  font-size: 15px;
+  font-family: var(--fuentePrincipal);
   line-height: 1.8;
-  
+
 }
+
 .worker-img {
-  width: 530px;
+  display: none;
+  /*width: 530px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 12px;*/
 }
 
+/*--------------------------------------Fin quienes Somos (Movil)--------------------------------------------*/
 
-footer {
-  margin-top: 6rem;
-  border-bottom: 5px solid #0ca678;
+/*--------------------------------------Inicio quienes Somos (Pc)--------------------------------------------*/
+@media(min-width: 768px) {
+  .about-us-section {
+    background-image: none;
+    border-top: 5px solid var(--principal);
+    display: flex;
+    min-height: 70vh;
+    gap: 30px;
+    padding: 1.8rem;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 66px;
+  }
+
+  .about-us-h2 {
+    font-size: 40px;
+  }
+
+  .about-us-p {
+    font-size: 20px;
+    font-family: var(--fuentePrincipal);
+    line-height: 1.8;
+
+  }
+
+  .worker-img {
+    display: flex;
+    width: 530px;
+    height: auto;
+    border-radius: 12px;
+  }
 }
 
-.texto {
-  background-color: var(--blanco);
-  width: auto;
-  height: 43.5rem;
-  display: flex;
-  flex-direction: column;
-  align-content: end;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  
-}
+/*--------------------------------------Fin quienes Somos (Pc)--------------------------------------------*/
 
-.parrafoSeccion {
-  background-color: var(--blanco);
-  color: var(--negro);
+/*----------------------------------Inicio servicios (Pc)-----------------------------------*/
+.fondo {
+  background: linear-gradient(#7be2c3, white);
 }
-
-.description {
-  color: var(--blanco);
-  border-radius: .7rem;
-  padding: 5% 2%;
-  text-transform: uppercase;
-  background-color: var(--principal);
-}
-
-.campo {
-  display: flex;
-  flex-direction: column;
-}
-
-.contenedor {
-  margin-bottom: 200px;
-}
-
-.contenedor-campos {
-  width: 30rem;
-  height: 15rem;
-}
-
-.boton {
-  background-color: var(--principal);
-  color: var(--blanco);
-  padding: 1rem 4rem;
-  border-radius: .7rem;
-  text-transform: uppercase;
-}
-.boton-form {
-  background-color: var(--principal);
-  color: var(--blanco);
-  padding: .5rem 2rem;
-  border-radius: .7rem;
-  text-transform: uppercase;
-}
-
-.form-img {
-  width: 100%;
-}
-
-iframe {
-  margin: 1rem;
-  border-color: var(--negro);
-  width: 100%;
-  height: 23rem;
-}
-
-footer {
-  margin-top: 1rem;
-}
-
-.form {
-  display: grid;
-  margin: 50px;
-  grid-template-columns: 1.15fr 1fr;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-#whatsapp {
-   position: fixed;
-   bottom: 20px;
-   right:20px;
-}
-
-svg {
-  width: 80px;
-  filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
-}
-
-circle {
-  fill: #25d366;
-}
-
-path {
-  fill: #fff;
-}
-
-ion-icon {
-  margin-right: 5px;
-}
-
-ion-icon {
-  margin-right: 5px;
-}
-
 .servicios {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 5rem;
-  font-family: var(--fuenteAlternativa);
+  font-family: var(--fuentePrincipal);
+  margin-bottom: 2rem;
 }
 
-.serv-title-span {
-  color: var(--principal);
-}
+.serv{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); 
+  grid-gap: 1em;
+  margin: 0rem;
+  
+} 
 
-.card img {
-  max-width: 50px;
- }
- 
-.card {
-  border-radius: 15px;
-  /* filter: drop-shadow(0 5px 10px 0 #ffffff); */
-  width: 200px;
-  height: 180px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  /* background-color: #75757521; */
+.tarjeta {
   position: relative;
-  z-index: 0;
-  overflow: hidden;
-  transition: 0.6s ease-in;
+  width: 160px;
+  height: 240px;
+}
+.tarjeta span{
+  display: none;
+}
+
+/* Anula la clase .card pero conserva los estilos de .face y .front */
+/* .card:not(.face):not(.front) {
+  /* Propiedades específicas de .card que deseas anular 
+  display: none;
+}
+
+/* Anula la clase .card pero conserva los estilos de .face y .front 
+.modal:not(.face):not(.back) {
+  /* Propiedades específicas de .card que deseas anular 
+  display: none;
+}
+
+.modal-content:not(.back2) {
+  /* Propiedades específicas de .card que deseas anular 
+  display: none;
+} */
+
+.face {
+  position: absolute;
+  backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 10px;
+  transition: .5s;
+  border-radius: 15px;
+  width: 20ch;
+  height: 30ch;
+  background-color: var(--transparencia);
+  box-shadow: rgba(99, 99, 99, 0.8) 0px 2px 8px 0px;
   text-align: center;
+  gap: .2rem;
+  
 }
-
+.card img {
+  max-width: 80px;
+}
 .card-title {
-  font-size: 18px;
-  max-width: 15ch;
+  font-size: 20px;
+  max-width: 18ch;
   color: var(--gris);
 }
 
-/*Para Celular*/
-@media(max-width: 600px) {
-  .contenido-hero {
-    height: 21rem;
+.tarjeta .front {
+  transform: perspective(500px) rotateY(0deg);
+  box-shadow: 0 5px 10px var(--negro);
+}
+
+.tarjeta .back {
+  transform: perspective(500px) rotateY(180deg);
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.tarjeta:hover .front {
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.tarjeta:hover .back {
+  transform: perspective(500px) rotateY(360deg);
+}
+
+
+
+
+/*----------------------------------Fin servicios (Pc)-----------------------------------*/
+/*----------------------------------Inicio servicios (Movil)-----------------------------------*/
+@media(max-width: 768px) {
+
+  
+
+  .serv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 0rem;
   }
 
-  .fotos {
-    width: 13rem;
-    height: 7rem;
+  .serv-title-span {
+    color: var(--principal);
+  }
+
+  .card img {
+    max-width: 40px;
+  }
+
+  .card {
+    border-radius: 15px;
+    width: 15ch;
+    height: 15ch;
+    background-color: var(--transparencia);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.6s ease-in;
     display: flex;
     align-items: center;
-    align-content: center;
-    padding: 1px;
-    background-color: var(--gris);
-    margin: 0%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 15px;
+    max-width: 16ch;
+    color: var(--gris);
+  }
+
+ 
+}
+
+/*--------------Fin modal-----------------*/
+
+/*----------------------------------Fin servicios (Movil)-----------------------------------*/
+
+
+
+/*-------------------------------Inicio formulario (Pc)-------------------------------------*/
+.form2 {
+  display: none;
+}
+
+.contenedor {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+ /*Modal*/
+
+ .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 3;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 20% auto;
+  padding: 20px;
+  width: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.form {
+  background-color: var(--principal);
+  max-width: 600px;
+  min-height: 80vh;
+  margin-top: 8vh;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fieldset {
+  background-color: var(--blanco);
+  border: none;
+  border-radius: .5rem;
+  object-fit: cover;
+  
+}
+
+.legend {
+
+  color: var(--blanco);
+  background-color: var(--principal);
+  border-radius: .5rem;
+  font: 4ch sans-serif;
+  padding: 0.5rem;
+  width: fit-content;
+
+}
+.input span{
+  font-family: var(--fuentePrincipal);
+}
+.inputbox {
+  border-bottom: none;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.inputbox label {
+
+  display: grid;
+  width: 500px;
+  padding: 12px;
+  grid-template-areas: "input";
+  width: 100%;
+  >* {
+    grid-area: input;
+  }
+
+}
+
+span {
+  transform-origin: left;
+  transition: transform .3s, color .3s;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--secundario);
+  font: inherit;
+
+  &:focus+.span,
+  &:not(:placeholder-shown)+.span {
+
+    color: red;
+    transform: translate(0, -100%) scale(.8);
+
+  }
+}
+
+.inputbox ion-icon {
+
+  right: 8px;
+  color: var(--principal);
+  font-size: 1.2rem;
+  top: 20px;
+}
+.textarea{
+display: flex;
+height: auto;
+}
+.textarea textarea {
+  font-size: 1rem;
+  font-style: normal;
+  font-family: var(--fuentePrincipal);
+  
+  min-height: 18vh;
+
+}
+
+.boton{
+  display: flex;
+  width: 100%;
+  height: 40px; 
+  border: none;
+  outline: none;
+  justify-content: center;
+    
+  
+}
+.button{
+  display: flex;
+  font-family: var(--fuentePrincipal);
+  background: linear-gradient(#7be2c3, white);
+  border: solid #00bb2d;
+  border-radius: 10px;
+  
+}
+.button:hover {
+  background: var(--principal);
+  transition: all 0.2s ease;
+  color: var(--blanco);
+}
+
+
+/*-------------------------------Fin formulario (Pc)-------------------------------------*/
+
+/*-------------------------------Inicio formulario (Movil)-------------------------------------*/
+@media(max-width: 768px) {
+
+  .contenedor,
+  .modal {
+    display: none;
+  }
+
+  .form2 {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-decoration: dashed;
+    font-family: var(--fuentePrincipal);
+    color: var(--negro);
+    margin: 0 1rem;
+    /* margin-top: -10rem; */
+  }
+
+  .formulario2 {
+    position: relative;
+    background-color: rgba(255, 255, 255, .3);
 
   }
 
-  .description {
-    font-size: small;
-    width: 12rem;
-    height: 5rem;
+  .formulario2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../img/form-img.jpg);
+    z-index: -1;
+    background-size: cover;
+    /* cubrir todo el contenedor -*/
+    background-position: center;
+    /* centrar la imagen */
+    justify-content: space-between;
+    /* espacio entre las imágenes*/
+    object-fit: cover;
+  }
+
+  .contenedor-campos2 {
+    /* width: 30rem; */
+    height: 15rem;
 
   }
-  .serv{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr; 
-  } 
 
-  .card{
-    max-height: 80px;
-    flex-direction: row;
+  .campo2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alinear-derecha-flex2 {
+    display: flex;
     justify-content: space-around;
-    /* background-color: #75757560; */
+
   }
+
+  .boton2 {
+    margin: 3rem;
+    background-color: var(--principal);
+    color: var(--blanco);
+    padding: .3rem 2rem;
+    border-radius: .7rem;
+    text-transform: uppercase;
+
+  }
+
+  .form-img {
+    display: none;
+  }
+}
+
+/*-------------------------------Fin formulario (Movil)-------------------------------------*/
+
+/*---------------------------------------Inicio Logos (PC)---------------------------------*/
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section h1 {
+  align-self: center;
+}
+
+.banner-container {
+  align-self: center;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+}
+
+.banner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.logo {
+  display: flex;
+  height: 5cm;
+  margin: 0 1.5cm;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner img {
+  height: auto;
+  max-width: 200px;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+
+/*---------------------------------------Fin Logos (PC)---------------------------------*/
+
+/*---------------------------------------Inicio Logos (Movil)---------------------------------*/
+
+/*---------------------------------------Fin Logos (Movil)---------------------------------*/
+
+/* ---------------------------Inicio Videos importantes---------------------------------- */
+
+/* .pantalla {
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 20%;
+  height: 80%;
+  padding: .2rem;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--transparencia);
+  /* Fondo de color para cubrir márgenes blancos 
+}
+
+.video-description {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: black;
+  /* Fondo negro para cubrir márgenes negros en videos de diferente proporción 
+}
+
+/* Estilos adicionales para pantallas más pequeñas 
+@media screen and (max-width: 768px) {
+  .video-wrapper {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .video-wrapper {
+    width: 100%;
+  }
+} */
+
+/* ---------------------------Fin Videos importantes---------------------------------- */
+
+/*-------------------------------footer----------------------------------*/
+
+footer {
+  margin-top: 4rem;
+  border-bottom: 5px solid var(--principal);
+}
+
+.contactos {
+  margin-left: 2rem;
+}
+
+.redes {
+  height: 40px;
+  width: 40px;
+  margin: 1rem .4rem;
+}
+
+.hogar {
+
+  text-align: end;
+  margin-top: -20px;
+  position: fixed;
+  bottom: 80px;
+  right: 22px;
+  background: linear-gradient(#7be2c3, white);
+  border: solid #00bb2d;
+  border-radius: 10px;
+  padding: 5px;
+  opacity: 0.8;
+  
 
 
 }
 
-/*Para compus*/
-@media (min-width: 601px) {
-  .contenedor {
-    display: flex;
-    row-gap: 2rem;
-    column-gap: 2rem;
-    height: auto;
-  }
-  .serv{
-    display: grid;
-    column-gap: 30px;
-    row-gap: 40px;
-    grid-template-columns:repeat(5, 1fr);
-  }
+.hogarcito {
 
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    padding: 0;
+  height: 24px;
+  width: 28px;
+}
 
-  }
+#whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 
-  .fotos {
-    width: 15rem;
-    height: 9rem;
-  }
+}
 
-  .texto {
+.icono-wsp {
+  height: 50px;
+  width: 50px;
+}
 
-    text-align: center;
-    margin-right: .5rem;
-    padding: 0;
-    margin-bottom: 0;
-    height: 92%;
-    
-  }
-
-  .card::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -15px;
-    right: -15px;
-    background: var(--secundario);
-    height:220px;
-    width: 25px;
-    border-radius: 32px;
-    transform: scale(1);
-    transform-origin: 50% 50%;
-    transition: 0.5s;
-    
-  }
-  
-  .card:hover::before{
-    transition-delay:0.01s ;
-    transform: scale(40);
-  }
-
-  /* La otra animacion */
-  /* .card::before,
-  .card::after {
-    z-index: -1;
-    position: absolute;
-    content: "";
-    width: 20%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-
-    background-color: var(--principal);
-    transition: 0.5s;
-  }
-
-  .card::before {
-    top: 0;
-    right: 0;
-    border-radius: 0 15px 0 100%;
-  }
-
-  .card::after {
-    bottom: 0;
-    left: 0;
-    border-radius: 0 100%  0 15px;
-  }
-
-  .card:hover::before,
-  .card:hover:after {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    transition: all 0.5s;
-  } */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
 
 }
