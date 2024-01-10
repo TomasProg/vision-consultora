@@ -17,14 +17,16 @@
 </head>
 
 <body>
-
+    <!-- ----------------------------header---------------------- -->
     <header class="container">
         <div class="logonav"><!--id="navbar" -->
             <img class="marca" src="./img/logo horizontal sin desc.png" alt="logoConsultoría">
             <div class="nav"></div>
             <nav>
                 <ul>
-                    <li><a class="lista" href="./index.html" style= "border-bottom: 3px solid var(--principal);"><ion-icon name="home-sharp"></ion-icon> Inicio</a>
+                    <li><a class="lista" href="./index.html"
+                            style="border-bottom: 3px solid var(--principal);"><ion-icon name="home-sharp"></ion-icon>
+                            Inicio</a>
                     </li>
                     <li><a class="lista" href="./servicios.html"><ion-icon name="clipboard-sharp"></ion-icon>
                             Servicios</a>
@@ -47,12 +49,20 @@
             </nav>
         </div>
         <div class="slide">
-            <div class="image1"><span class="propagandas">Evite infracciones a su empresa</span><p>Mantenemos la documentación legal necesaria para prevenir multas de Organismos de Control</p></div>
-            <div class="image2"><span class="propagandas">Reduzcan los accidentes en su empresa</span><p>Trabajamos para disminuir la cantidad de accidentes y salir de Programas de Reducción de Siniestralidad. Con un plan detallado y definido por profesionales que lo llevan adelante.</p></div>
-            <div class="image3"><span class="propagandas">Mantenga a su personal capacitado</span><p>Definimos un Programa de capacitaciones acorde a las necesidades de tu empresa, a fin de que el personal se mantenga alineado con las políticas y responda en base a sus requerimientos.</p></div>
+            <div class="image1"><span class="propagandas">Evite infracciones a su empresa</span>
+                <p>Mantenemos la documentación legal necesaria para prevenir multas de Organismos de Control</p>
+            </div>
+            <div class="image2"><span class="propagandas">Reduzcan los accidentes en su empresa</span>
+                <p>Trabajamos para disminuir la cantidad de accidentes y salir de Programas de Reducción de
+                    Siniestralidad. Con un plan detallado y definido por profesionales que lo llevan adelante.</p>
+            </div>
+            <div class="image3"><span class="propagandas">Mantenga a su personal capacitado</span>
+                <p>Definimos un Programa de capacitaciones acorde a las necesidades de tu empresa, a fin de que el
+                    personal se mantenga alineado con las políticas y responda en base a sus requerimientos.</p>
+            </div>
         </div>
     </header>
-    <!-- -------Acerca de Nosotros--------- -->
+    <!-- -----------------------Acerca de Nosotros---------------- -->
     <div class="about-us-section" id="nosotros">
         <div class="text-box sombra">
             <h2 class="about-us-h2">¿Quiénes somos?</h2>
@@ -71,7 +81,7 @@
 
     </div>
 
-    <!-- ---------Servicios------- -->
+    <!-- ---------------------------------Servicios----------------------------- -->
     <div class="fondo">
         <div id="servicios" class="servicios">
             <h1>Servicios </h1>
@@ -346,116 +356,117 @@
                 <!-- fin tarjeta -->
             </div>
         </div>
-        <!-- ----------------inicio del formulario-------------------- -->
-        <div class="form2">
+    </div>
+    <!-- ----------------------inicio del formulario movil------------------------- -->
+    <div class="form2">
 
-            <h2>¿En qué te podemos ayudar?</h2>
-            <form class="formulario2">
-                <fieldset>
-                    <div class="contenedor-campos2">
-                        <div class="campo2">
-                            <label>Nombre</label>
-                            <input class="input-text" type="text" placeholder="Indique su nombre" required>
-                        </div>
-
-                        <div class="campo2">
-                            <label>Telefono</label>
-                            <input class="input-text" type="tel" placeholder="Indique su telefono" required>
-                        </div>
-
-                        <div class="campo2">
-                            <label>E-mail</label>
-                            <input class="input-text" type="email" placeholder="Agregue direccion de Email" required>
-                        </div>
-                        <div class="campo2">
-                            <label>Mensaje</label>
-                            <textarea class="input-text" cols="7" rows="" placeholder="Comentarios"></textarea>
-                        </div>
-
-                    </div>
-                    <div class="alinear-derecha-flex2">
-                        <input class="boton2" type="submit" value="Enviar">
-
-                    </div>
-                </fieldset>
-            </form>
-
-
-
-        </div>
-
-        <!-- Formulario Pc -->
-        <div class="contenedor modal">
-            <form class="sombra form">
-
-                <fieldset class="fieldset">
-                    <legend class="legend">¿En qué te podemos ayudar?</legend>
-
-                    <div class="inputbox">
-                        <label>
-                            <input type="text" name='name' class="input" placeholder=" " required>
-                            <span class="span"><ion-icon name="list"></ion-icon> Ingrese su nombre:</span>
-                        </label>
+        <h2>¿En qué te podemos ayudar?</h2>
+        <form class="formulario2">
+            <fieldset>
+                <div class="contenedor-campos2">
+                    <div class="campo2">
+                        <label>Nombre</label>
+                        <input class="input-text" type="text" placeholder="Indique su nombre" required>
                     </div>
 
-                    <div class="inputbox">
-                        <label>
-                            <input type="text" name='name' class="input" placeholder=" " required>
-                            <span class="span"><ion-icon name="mail"></ion-icon> Ingrese su e-mail:</span>
-                        </label>
+                    <div class="campo2">
+                        <label>Telefono</label>
+                        <input class="input-text" type="tel" placeholder="Indique su telefono" required>
                     </div>
 
-                    <div class="inputbox">
-                        <label>
-                            <input type="text" name='name' class="input" placeholder=" " required>
-                            <span class="span"><ion-icon name="call"></ion-icon> Ingrese su teléfono:</span>
-                        </label>
+                    <div class="campo2">
+                        <label>E-mail</label>
+                        <input class="input-text" type="email" placeholder="Agregue direccion de Email" required>
+                    </div>
+                    <div class="campo2">
+                        <label>Mensaje</label>
+                        <textarea class="input-text" cols="7" rows="" placeholder="Comentarios"></textarea>
                     </div>
 
-                    <div class="textarea">
-                        <textarea class="inputbox" name="coments" id="" cols="" rows=""
-                            placeholder="Haga su consulta"></textarea>
-                    </div>
-
-                    <div class="boton">
-                        <input class="button" name="register" type="submit" value="Enviar consulta">
-                    </div>
-
-                </fieldset>
-            </form>
-        </div>
-
-        <!-- ------------------------------ Nuestros Clientes--------------------------- -->
-        <section>
-            <h1>Nos acompañan <span class="serv-title-span">nuestros clientes</span></h1>
-            <div class="banner-container">
-                <div class="banner">
-                    <!-- Logotipos -->
-                    <div class="logo"><img src="./logos/1agrality.png" alt="Logo 1"></div>
-                    <div class="logo"><img src="./logos/2Transervice.jpg" alt="Logo 2"></div>
-                    <div class="logo"><img src="./logos/3club nautico.png" alt="Logo 3"></div>
-                    <div class="logo"><img src="./logos/4labweston.png" alt="Logo 4"></div>
-                    <div class="logo"><img src="./logos/5HSBC-Fuente.jpg" alt="Logo 5"></div>
-                    <div class="logo"><img src="./logos/6naranja.png" alt="Logo 6"></div>
-                    <div class="logo"><img src="./logos/7UthgraDelMar.png" alt="Logo 7"></div>
-                    <div class="logo"><img src="./logos/8sasso.png" alt="Logo 8"></div>
-                    <div class="logo"><img src="./logos/9peron.png" alt="Logo 9"></div>
-                    <div class="logo"><img src="./logos/10recfimar.png" alt="Logo 10"></div>
-                    <div class="logo"><img src="./logos/11Propeller.png" alt="Logo 11"></div>
-                    <div class="logo"><img src="./logos/12Calsa.png" alt="Logo 12"></div>
-                    <div class="logo"><img src="./logos/13coiron.png" alt="Logo 13"></div>
-                    <div class="logo"><img src="./logos/14goottschalk.png" alt="Logo 14"></div>
-                    <div class="logo"><img src="./logos/15inprope.png" alt="Logo 15"></div>
-                    <div class="logo"><img src="./logos/16Bergamin.png" alt="Logo 16"></div>
-                    <!-- ... Agrega los demás logotipos -->
                 </div>
-                <button class="prev-btn">&lt;</button>
-                <button class="next-btn">&gt;</button>
-            </div>
-        </section>
+                <div class="alinear-derecha-flex2">
+                    <input class="boton2" type="submit" value="Enviar">
 
-        <!---------------------- Videos con iformacion importante ------------------------->
-        <!-- <div class="pantalla">
+                </div>
+            </fieldset>
+        </form>
+
+
+
+    </div>
+
+    <!---------------------------- Formulario Pc ------------------------------------->
+    <div class="contenedor modal">
+        <form class="sombra form">
+
+            <fieldset class="fieldset">
+                <legend class="legend">¿En qué te podemos ayudar?</legend>
+
+                <div class="inputbox">
+                    <label>
+                        <input type="text" name='name' class="input" placeholder=" " required>
+                        <span class="span"><ion-icon name="list"></ion-icon> Ingrese su nombre:</span>
+                    </label>
+                </div>
+
+                <div class="inputbox">
+                    <label>
+                        <input type="text" name='name' class="input" placeholder=" " required>
+                        <span class="span"><ion-icon name="mail"></ion-icon> Ingrese su e-mail:</span>
+                    </label>
+                </div>
+
+                <div class="inputbox">
+                    <label>
+                        <input type="text" name='name' class="input" placeholder=" " required>
+                        <span class="span"><ion-icon name="call"></ion-icon> Ingrese su teléfono:</span>
+                    </label>
+                </div>
+
+                <div class="textarea">
+                    <textarea class="inputbox" name="coments" id="" cols="" rows=""
+                        placeholder="Haga su consulta"></textarea>
+                </div>
+
+                <div class="boton">
+                    <input class="button" name="register" type="submit" value="Enviar consulta">
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- ------------------------------ Nuestros Clientes--------------------------- -->
+    <section>
+        <h1>Nos acompañan <span class="serv-title-span">nuestros clientes</span></h1>
+        <div class="banner-container">
+            <div class="banner">
+                <!-- Logotipos -->
+                <div class="logo"><img src="./logos/1agrality.png" alt="Logo 1"></div>
+                <div class="logo"><img src="./logos/2Transervice.jpg" alt="Logo 2"></div>
+                <div class="logo"><img src="./logos/3club nautico.png" alt="Logo 3"></div>
+                <div class="logo"><img src="./logos/4labweston.png" alt="Logo 4"></div>
+                <div class="logo"><img src="./logos/5HSBC-Fuente.jpg" alt="Logo 5"></div>
+                <div class="logo"><img src="./logos/6naranja.png" alt="Logo 6"></div>
+                <div class="logo"><img src="./logos/7UthgraDelMar.png" alt="Logo 7"></div>
+                <div class="logo"><img src="./logos/8sasso.png" alt="Logo 8"></div>
+                <div class="logo"><img src="./logos/9peron.png" alt="Logo 9"></div>
+                <div class="logo"><img src="./logos/10recfimar.png" alt="Logo 10"></div>
+                <div class="logo"><img src="./logos/11Propeller.png" alt="Logo 11"></div>
+                <div class="logo"><img src="./logos/12Calsa.png" alt="Logo 12"></div>
+                <div class="logo"><img src="./logos/13coiron.png" alt="Logo 13"></div>
+                <div class="logo"><img src="./logos/14goottschalk.png" alt="Logo 14"></div>
+                <div class="logo"><img src="./logos/15inprope.png" alt="Logo 15"></div>
+                <div class="logo"><img src="./logos/16Bergamin.png" alt="Logo 16"></div>
+                <!-- ... Agrega los demás logotipos -->
+            </div>
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button>
+        </div>
+    </section>
+
+    <!---------------------- Videos con iformacion importante ------------------------->
+    <!-- <div class="pantalla">
             <h1>Algunas de <span class="serv-title-span">nuestras tareas</span></h1>
 
             <div class="video-container">
@@ -474,42 +485,45 @@
                 </div>
             </div>
         </div> -->
-        <footer id="footer">
-            <div class="contactos">
-                <h1>Contactanos</h1>
+
+    <!-- ---------------------------------------Footer-------------------------- -->
+    <footer id="footer">
+        <div class="contactos">
+            <h1>Contactanos</h1>
 
 
-                <h3>Cel: 291-4267630 / 223-5470601</h3>
+            <h3>Cel: 291-4267630 / 223-5470601</h3>
 
-                <h3>Mail: <a href="mailto:visioncjg@gmail.com">visioncjg@gmail.com</a> </h3>
+            <h3>Mail: <a href="mailto:visioncjg@gmail.com">visioncjg@gmail.com</a> </h3>
 
-                <a href="https://www.facebook.com/visionconsultoria.mdq"> <img class="redes"
-                        src="./img/facebook_logo_icon_181742.png" alt="logo-facebook"></a>
-                <a href="https://www.instagram.com/visionconsultoria.mdq"> <img class="redes"
-                        src="./img/instagram_logo_icon_181738.png" alt="logo-instagram"></a>
-                <a href="https://www.linkedin.com/company/visionconsultoria-hys/"><img class="redes"
-                        src="./img/linkedin_logo_icon_181743.png" alt="logo-linkedin"></a>
-                
-            </div>
+            <a href="https://www.facebook.com/visionconsultoria.mdq"> <img class="redes"
+                    src="./img/facebook_logo_icon_181742.png" alt="logo-facebook"></a>
+            <a href="https://www.instagram.com/visionconsultoria.mdq"> <img class="redes"
+                    src="./img/instagram_logo_icon_181738.png" alt="logo-instagram"></a>
+            <a href="https://www.linkedin.com/company/visionconsultoria-hys/"><img class="redes"
+                    src="./img/linkedin_logo_icon_181743.png" alt="logo-linkedin"></a>
+
+        </div>
 
 
-            <p>Todos los derechos Reservados - 2023©</p>
+        <p>Todos los derechos Reservados - 2023©</p>
 
-    </div>
+        </div>
+        <!-- ------------footer------------ -->
+        <div class="hogar">
+            <a href="#"><img class="hogarcito" src="./img/home-outline.png" alt="Casita a inicio"></a>
+        </div>
+
+
+        <div id="whatsapp">
+            <a href="https://wa.me/5492914267630" target="_blank" class="whatsapp-container"><img
+                    src=".//img/whatsapp_logo_icon_257004.png" class="icono-wsp" alt="iconoWsp"></a>
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="./js/main.js"></script>
     </footer>
-    <div class="hogar">
-        <a href="#"><img class="hogarcito" src="./img/home-outline.png" alt="Casita a inicio"></a>
-    </div>
-
-
-    <div id="whatsapp">
-        <a href="https://wa.me/5492914267630" target="_blank" class="whatsapp-container"><img
-                src=".//img/whatsapp_logo_icon_257004.png" class="icono-wsp" alt="iconoWsp"></a>
-    </div>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./js/main.js"></script>
 </body>
 
 </html>
