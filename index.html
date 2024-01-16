@@ -25,7 +25,9 @@
             <nav>
                 <ul>
                     <li><a class="lista" href="./index.html"
-                            style="border-bottom: 3px solid var(--principal);"><ion-icon name="home-sharp"></ion-icon>
+                        style="background-color: var(--transparencia);
+                        border-radius: .5rem;
+                        color: var(--principal);"><ion-icon name="home-sharp"></ion-icon>
                             Inicio</a>
                     </li>
                     <li><a class="lista" href="./servicios.html"><ion-icon name="clipboard-sharp"></ion-icon>
@@ -35,11 +37,10 @@
                         <ul>
                             <li><a class="lista" href="./cursos.html">Cursos</a></li>
                             <li><a class="lista" href="./epp.html">E.P.P.</a></li>
-                            <li><a class="lista" href="productos.html">Producto 2</a></li>
-
+                            
                         </ul>
                     </li>
-                    <li><a class="lista" href="./index.html#nosotros"><ion-icon name="star-sharp"></ion-icon> Sobre
+                    <li><a class="lista" href="./nosotros.html"><ion-icon name="star-sharp"></ion-icon> Sobre
                             Nosotros</a>
                     </li>
                     <li><a class="lista contact" href="#footer"><ion-icon name="mail-open-sharp"></ion-icon>
@@ -48,22 +49,31 @@
                 </ul>
             </nav>
         </div>
-        <div class="slide">
-            <div class="image1"><span class="propagandas">Evite infracciones a su empresa</span>
-                <p>Mantenemos la documentación legal necesaria para prevenir multas de Organismos de Control</p>
-            </div>
-            <div class="image2"><span class="propagandas">Reduzcan los accidentes en su empresa</span>
+        <div class="image2">
+            <div class="about-pc">
+                <h2 class="propagandas">¿Quiénes somos?</h2>
+                <p class="propagandas-p">
+                    Somos un grupo de profesionales que acompaña a sus clientes en el crecimiento diario, adaptándonos a
+                    sus
+                    necesidades y trabajando en conjunto. Prestamos diferentes servicios y colaboramos a que las
+                    empresas
+                    consigan su mejor versión, con asesoramiento constante.</p>
+                <!--<span class="propagandas">Reduzcan los accidentes en su empresa</span>
                 <p>Trabajamos para disminuir la cantidad de accidentes y salir de Programas de Reducción de
-                    Siniestralidad. Con un plan detallado y definido por profesionales que lo llevan adelante.</p>
+                    Siniestralidad. Con un plan detallado y definido por profesionales que lo llevan adelante.</p> -->
             </div>
-            <div class="image3"><span class="propagandas">Mantenga a su personal capacitado</span>
+            <!-- <div class="image1"><span class="propagandas">Evite infracciones a su empresa</span>
+                <p>Mantenemos la documentación legal necesaria para prevenir multas de Organismos de Control</p>
+            </div>-->
+            <!--<div class="image3"><span class="propagandas">Mantenga a su personal capacitado</span>
                 <p>Definimos un Programa de capacitaciones acorde a las necesidades de tu empresa, a fin de que el
                     personal se mantenga alineado con las políticas y responda en base a sus requerimientos.</p>
-            </div>
+            </div> -->
         </div>
+
     </header>
     <!-- -----------------------Acerca de Nosotros---------------- -->
-    <div class="about-us-section" id="nosotros">
+    <!-- <div class="about-us-section" id="nosotros">
         <div class="text-box sombra">
             <h2 class="about-us-h2">¿Quiénes somos?</h2>
             <p class="about-us-p">
@@ -79,7 +89,7 @@
         </div>
         <img src="img/trabajador2.jpg" class="worker-img" alt="Trabajador">
 
-    </div>
+    </div> -->
 
     <!-- ---------------------------------Servicios----------------------------- -->
     <div class="fondo">
@@ -88,6 +98,104 @@
             <div class="serv">
                 <!-- inicio tarjeta -->
                 <div class="tarjeta">
+                    <div class="card face front">
+                        <img src="./img/Seguridad e higiene laboral.jpg" alt="fabrica">
+                        <h2>Higiene y seguridad en el trabajo</h2>
+                    </div>
+                    <div class="face back" id="modal1">
+                        <div class="back2">
+                            <!-- <span class="close" onclick="cerrarModal('modal1')">&times;</span> -->
+                            <h2>Higiene y seguridad en el trabajo</h2>
+                            <ul>
+                                <li>
+                                    <p>Servicios internos y externos con profesionales habilitados y matriculados.</p>
+                                </li>
+                                <li>
+                                    <p>Supervisión de obras.</p>
+                                </li>
+                                <li>
+                                    <p>Asesoramiento constante a nuestros clientes.</p>
+                                </li>
+                                <li>
+                                    <p>Auditorías para empresas.</p>
+                                </li>
+                                <li>
+                                    <p>Relevamiento de riesgos.</p>
+                                </li>
+                                <li>
+                                    <p>Reducción de siniestralidad.</p>
+                                </li>
+                                <li>
+                                    <p>Contacto directo con la ART.</p>
+                                </li>
+                                <li>
+                                    <p>Mediciones de iluminación.</p>
+                                </li>
+                                <li>
+                                    <p>Mediciones de Ruido.</p>
+                                </li>
+                                <li>
+                                    <p>Mediciones de Puesta a Tierra.</p>
+                                </li>
+                                <li>
+                                    <p>Programas de Seguridad.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="./servicios.html">Mas información</a>
+                    </div>
+                </div>
+                <!-- inicio tarjeta -->
+                <div class="tarjeta">
+                    <div class="card face front">
+                        <img src="./img/Gestion ambiental.jpg" alt="ambiental">
+                        <h2>Gestión ambiental</h2>
+                    </div>
+                    <div class="face back" id="modal1">
+                        <div class="back2">
+                            <!-- <span class="close" onclick="cerrarModal('modal1')">&times;</span> -->
+                            <h2>Gestión ambiental</h2>
+                            <ul>
+                                <li>
+                                    <p>Estudios de Impacto Ambiental.</p>
+                                </li>
+                                <li>
+                                    <p>Certificado de Aptitud Ambiental (CAA).</p>
+                                </li>
+                                <li>
+                                    <p>Nivel de Complejidad Ambiental.</p>
+                                </li>
+                                <li>
+                                    <p>Licencia de Emisiones Gaseosas a la Atmósfera (LEGA).</p>
+                                </li>
+                                <li>
+                                    <p>Auditoría Ambiental.</p>
+                                </li>
+                                <li>
+                                    <p>Monitoreo de Material Particulado.</p>
+                                </li>
+                                <li>
+                                    <p>Inscripción como Generador de Residuos Especiales.</p>
+                                </li>
+                                <li>
+                                    <p>Presentaciones ante municipalidad, OPDS y los diferentes organismos de control.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Asesoramiento en el armado de depósito.</p>
+                                </li>
+                                <li>
+                                    <p>Asesoramiento en la búsqueda de transportista y tratadores habilitados.</p>
+                                </li>
+                                <li>
+                                    <p>Habilitaciones.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="./servicios.html">Mas información</a>
+                    </div>
+                </div>
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard1">
                         <img src="./img/seguridad.png" alt="Higiene">
                         <h3 class="card-title">
@@ -104,9 +212,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard2">
                         <img src="./img/tierra.png" alt="Medio Ambiente">
                         <h3 class="card-title">
@@ -123,9 +231,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard3">
                         <img src="./img/medioambiente.png" alt="Impacto ambiental">
                         <h3 class="card-title">
@@ -143,9 +251,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard4">
                         <img src="./img/empresa.png" alt="Empresa">
                         <h3 class="card-title">
@@ -162,9 +270,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard5">
                         <img src="./img/profesional.png" alt="Asesorias">
                         <h3 class="card-title">
@@ -181,9 +289,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard6">
                         <img src="./img/document.png" alt="Documentación">
                         <h3 class="card-title">
@@ -200,9 +308,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard7">
                         <img src="./img/certificado-de-garantia.png" alt="certificaciones">
                         <h3 class="card-title">
@@ -219,9 +327,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard8">
                         <img src="./img/auditoria.png" alt="Auditoria">
                         <h3 class="card-title">
@@ -238,9 +346,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard9">
                         <img src="./img/martillo-neumatico.png" alt="Ruido">
                         <h3 class="card-title">
@@ -257,9 +365,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard10">
                         <img src="./img/bombilla.png" alt="Iluminacion">
                         <h3 class="card-title">
@@ -276,9 +384,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard11">
                         <img src="./img/corriente-electrica.png" alt="Tierra">
                         <h3 class="card-title">
@@ -295,9 +403,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard12">
                         <img src="./img/ergonomia.png" alt="ergonomia">
                         <h3 class="card-title">
@@ -314,9 +422,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard13">
                         <img src="./img/familia.png" alt="cobertura-tecnica">
                         <h3 class="card-title">
@@ -333,9 +441,9 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
-                <div class="tarjeta">
+                <!-- <div class="tarjeta">
                     <div class="card face front" id="miCard14">
                         <img src="./img/organismo-control.png" alt="organismo-control">
                         <h3 class="card-title">
@@ -352,178 +460,176 @@
                                 sapiente tempora sint.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- fin tarjeta -->
             </div>
         </div>
-    </div>
-    <!-- ----------------------inicio del formulario movil------------------------- -->
-    <div class="form2">
-
-        <h2>¿En qué te podemos ayudar?</h2>
-        <form class="formulario2">
-            <fieldset>
-                <div class="contenedor-campos2">
-                    <div class="campo2">
-                        <label>Nombre</label>
-                        <input class="input-text" type="text" placeholder="Indique su nombre" required>
+        
+        <!---------------------------- Formulario Pc ------------------------------------->
+        <div class="contenedor modal">
+            <form class="sombra form">
+                
+                <fieldset class="fieldset">
+                    <legend class="legend">¿En qué te podemos ayudar?</legend>
+                    
+                    <div class="inputbox">
+                        <label>
+                            <input type="text" name='name' class="input" placeholder=" " required>
+                            <span class="span"><ion-icon name="list"></ion-icon> Ingrese su nombre:</span>
+                        </label>
                     </div>
-
-                    <div class="campo2">
-                        <label>Telefono</label>
-                        <input class="input-text" type="tel" placeholder="Indique su telefono" required>
+                    
+                    <div class="inputbox">
+                        <label>
+                            <input type="text" name='name' class="input" placeholder=" " required>
+                            <span class="span"><ion-icon name="mail"></ion-icon> Ingrese su e-mail:</span>
+                        </label>
                     </div>
-
-                    <div class="campo2">
-                        <label>E-mail</label>
-                        <input class="input-text" type="email" placeholder="Agregue direccion de Email" required>
+                    
+                    <div class="inputbox">
+                        <label>
+                            <input type="text" name='name' class="input" placeholder=" " required>
+                            <span class="span"><ion-icon name="call"></ion-icon> Ingrese su teléfono:</span>
+                        </label>
                     </div>
-                    <div class="campo2">
-                        <label>Mensaje</label>
-                        <textarea class="input-text" cols="7" rows="" placeholder="Comentarios"></textarea>
-                    </div>
-
-                </div>
-                <div class="alinear-derecha-flex2">
-                    <input class="boton2" type="submit" value="Enviar">
-
-                </div>
-            </fieldset>
-        </form>
-
-
-
-    </div>
-
-    <!---------------------------- Formulario Pc ------------------------------------->
-    <div class="contenedor modal">
-        <form class="sombra form">
-
-            <fieldset class="fieldset">
-                <legend class="legend">¿En qué te podemos ayudar?</legend>
-
-                <div class="inputbox">
-                    <label>
-                        <input type="text" name='name' class="input" placeholder=" " required>
-                        <span class="span"><ion-icon name="list"></ion-icon> Ingrese su nombre:</span>
-                    </label>
-                </div>
-
-                <div class="inputbox">
-                    <label>
-                        <input type="text" name='name' class="input" placeholder=" " required>
-                        <span class="span"><ion-icon name="mail"></ion-icon> Ingrese su e-mail:</span>
-                    </label>
-                </div>
-
-                <div class="inputbox">
-                    <label>
-                        <input type="text" name='name' class="input" placeholder=" " required>
-                        <span class="span"><ion-icon name="call"></ion-icon> Ingrese su teléfono:</span>
-                    </label>
-                </div>
-
-                <div class="textarea">
-                    <textarea class="inputbox" name="coments" id="" cols="" rows=""
+                    
+                    <div class="textarea">
+                        <textarea class="inputbox" name="coments" id="" cols="" rows=""
                         placeholder="Haga su consulta"></textarea>
-                </div>
-
-                <div class="boton">
-                    <input class="button" name="register" type="submit" value="Enviar consulta">
-                </div>
-
-            </fieldset>
-        </form>
-    </div>
-
-    <!-- ------------------------------ Nuestros Clientes--------------------------- -->
-    <section>
-        <h1>Nos acompañan <span class="serv-title-span">nuestros clientes</span></h1>
-        <div class="banner-container">
-            <div class="banner">
-                <!-- Logotipos -->
-                <div class="logo"><img src="./logos/1agrality.png" alt="Logo 1"></div>
-                <div class="logo"><img src="./logos/2Transervice.jpg" alt="Logo 2"></div>
-                <div class="logo"><img src="./logos/3club nautico.png" alt="Logo 3"></div>
-                <div class="logo"><img src="./logos/4labweston.png" alt="Logo 4"></div>
-                <div class="logo"><img src="./logos/5HSBC-Fuente.jpg" alt="Logo 5"></div>
-                <div class="logo"><img src="./logos/6naranja.png" alt="Logo 6"></div>
-                <div class="logo"><img src="./logos/7UthgraDelMar.png" alt="Logo 7"></div>
-                <div class="logo"><img src="./logos/8sasso.png" alt="Logo 8"></div>
-                <div class="logo"><img src="./logos/9peron.png" alt="Logo 9"></div>
-                <div class="logo"><img src="./logos/10recfimar.png" alt="Logo 10"></div>
-                <div class="logo"><img src="./logos/11Propeller.png" alt="Logo 11"></div>
-                <div class="logo"><img src="./logos/12Calsa.png" alt="Logo 12"></div>
-                <div class="logo"><img src="./logos/13coiron.png" alt="Logo 13"></div>
-                <div class="logo"><img src="./logos/14goottschalk.png" alt="Logo 14"></div>
-                <div class="logo"><img src="./logos/15inprope.png" alt="Logo 15"></div>
-                <div class="logo"><img src="./logos/16Bergamin.png" alt="Logo 16"></div>
-                <!-- ... Agrega los demás logotipos -->
-            </div>
-            <button class="prev-btn">&lt;</button>
-            <button class="next-btn">&gt;</button>
+                    </div>
+                    
+                    <div class="boton">
+                        <input class="button" name="register" type="submit" value="Enviar consulta">
+                    </div>
+                    
+                </fieldset>
+            </form>
         </div>
-    </section>
-
+        
+        <!-- ------------------------------ Nuestros Clientes--------------------------- -->
+        <section>
+            <h1>Nos acompañan <span class="serv-title-span">nuestros clientes</span></h1>
+            <div class="banner-container">
+                <div class="banner">
+                    <!-- Logotipos -->
+                    <div class="logo"><img src="./logos/1agrality.png" alt="Logo 1"></div>
+                    <div class="logo"><img src="./logos/2Transervice.jpg" alt="Logo 2"></div>
+                    <div class="logo"><img src="./logos/3club nautico.png" alt="Logo 3"></div>
+                    <div class="logo"><img src="./logos/4labweston.png" alt="Logo 4"></div>
+                    <div class="logo"><img src="./logos/5HSBC-Fuente.jpg" alt="Logo 5"></div>
+                    <div class="logo"><img src="./logos/6naranja.png" alt="Logo 6"></div>
+                    <div class="logo"><img src="./logos/7UthgraDelMar.png" alt="Logo 7"></div>
+                    <div class="logo"><img src="./logos/8sasso.png" alt="Logo 8"></div>
+                    <div class="logo"><img src="./logos/9peron.png" alt="Logo 9"></div>
+                    <div class="logo"><img src="./logos/10recfimar.png" alt="Logo 10"></div>
+                    <div class="logo"><img src="./logos/11Propeller.png" alt="Logo 11"></div>
+                    <div class="logo"><img src="./logos/12Calsa.png" alt="Logo 12"></div>
+                    <div class="logo"><img src="./logos/13coiron.png" alt="Logo 13"></div>
+                    <div class="logo"><img src="./logos/14goottschalk.png" alt="Logo 14"></div>
+                    <div class="logo"><img src="./logos/15inprope.png" alt="Logo 15"></div>
+                    <div class="logo"><img src="./logos/16Bergamin.png" alt="Logo 16"></div>
+                    <!-- ... Agrega los demás logotipos -->
+                </div>
+                <button class="prev-btn">&lt;</button>
+                <button class="next-btn">&gt;</button>
+            </div>
+        </section>
+    </div>
+    
     <!---------------------- Videos con iformacion importante ------------------------->
     <!-- <div class="pantalla">
-            <h1>Algunas de <span class="serv-title-span">nuestras tareas</span></h1>
-
-            <div class="video-container">
-                <div class="video-wrapper sombra">
-                    <video class="video" controls src="./img/VideoCapacitacion.mp4" loop>
-                    </video>
-                    <div class="video-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                </div>
-                <div class="video-wrapper">
-                    <video class="video" controls src="./img/VideoCursoAutoelevador.mp4" loop></video>
-                    <div class="video-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                </div>
-                <div class="video-wrapper">
+        <h1>Algunas de <span class="serv-title-span">nuestras tareas</span></h1>
+        
+        <div class="video-container">
+            <div class="video-wrapper sombra">
+                <video class="video" controls src="./img/VideoCapacitacion.mp4" loop>
+                </video>
+                <div class="video-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            </div>
+            <div class="video-wrapper">
+                <video class="video" controls src="./img/VideoCursoAutoelevador.mp4" loop></video>
+                <div class="video-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            </div>
+            <div class="video-wrapper">
                     <video class="video" controls src="./img/VideoGrua.mp4" loop></video>
                     <div class="video-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                 </div>
             </div>
         </div> -->
-
-    <!-- ---------------------------------------Footer-------------------------- -->
-    <footer id="footer">
-        <div class="contactos">
-            <h1>Contactanos</h1>
-
-
-            <h3>Cel: 291-4267630 / 223-5470601</h3>
-
-            <h3>Mail: <a href="mailto:visioncjg@gmail.com">visioncjg@gmail.com</a> </h3>
-
-            <a href="https://www.facebook.com/visionconsultoria.mdq"> <img class="redes"
+        
+        <!-- ----------------------inicio del formulario movil------------------------- -->
+        <div class="form2">
+    
+            <h2>¿En qué te podemos ayudar?</h2>
+            <form class="formulario2">
+                <fieldset>
+                    <div class="contenedor-campos2">
+                        <div class="campo2">
+                            <label>Nombre</label>
+                            <input class="input-text" type="text" placeholder="Indique su nombre" required>
+                        </div>
+    
+                        <div class="campo2">
+                            <label>Telefono</label>
+                            <input class="input-text" type="tel" placeholder="Indique su telefono" required>
+                        </div>
+    
+                        <div class="campo2">
+                            <label>E-mail</label>
+                            <input class="input-text" type="email" placeholder="Agregue direccion de Email" required>
+                        </div>
+                        <div class="campo2">
+                            <label>Mensaje</label>
+                            <textarea class="input-text" cols="7" rows="" placeholder="Comentarios"></textarea>
+                        </div>
+    
+                    </div>
+                    <div class="alinear-derecha-flex2">
+                        <input class="boton2" type="submit" value="Enviar">
+    
+                    </div>
+                </fieldset>
+            </form>
+    
+        </div>
+        <!-- ---------------------------------------Footer-------------------------- -->
+        <footer id="footer">
+            <div class="contactos">
+                <h1>Contactanos</h1>
+                
+                
+                <h3>Cel: 291-4267630 / 223-5470601</h3>
+                
+                <h3>Mail: <a href="mailto:visioncjg@gmail.com">visioncjg@gmail.com</a> </h3>
+                
+                <a href="https://www.facebook.com/visionconsultoria.mdq"> <img class="redes"
                     src="./img/facebook_logo_icon_181742.png" alt="logo-facebook"></a>
-            <a href="https://www.instagram.com/visionconsultoria.mdq"> <img class="redes"
-                    src="./img/instagram_logo_icon_181738.png" alt="logo-instagram"></a>
-            <a href="https://www.linkedin.com/company/visionconsultoria-hys/"><img class="redes"
-                    src="./img/linkedin_logo_icon_181743.png" alt="logo-linkedin"></a>
+                    <a href="https://www.instagram.com/visionconsultoria.mdq"> <img class="redes"
+                        src="./img/instagram_logo_icon_181738.png" alt="logo-instagram"></a>
+                        <a href="https://www.linkedin.com/company/visionconsultoria-hys/"><img class="redes"
+                            src="./img/linkedin_logo_icon_181743.png" alt="logo-linkedin"></a>
+                            
+                        </div>
+                        
+                        
+                        <p>Todos los derechos Reservados - 2023©</p>
+                        
+                    </div>
+                    <!-- ------------footer------------ -->
+                    <div class="hogar">
+                        <a href="#"><img class="hogarcito" src="./img/home-outline.png" alt="Casita a inicio"></a>
+                    </div>
+                    
+                    
+                    <div id="whatsapp">
+                        <a href="https://wa.me/5492914267630" target="_blank" class="whatsapp-container"><img
+                            src=".//img/whatsapp_logo_icon_257004.png" class="icono-wsp" alt="iconoWsp"></a>
+                        </div>
+                        
+                        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                        <script src="./js/main.js"></script>
+                    </footer>
+                </body>
 
-        </div>
-
-
-        <p>Todos los derechos Reservados - 2023©</p>
-
-        </div>
-        <!-- ------------footer------------ -->
-        <div class="hogar">
-            <a href="#"><img class="hogarcito" src="./img/home-outline.png" alt="Casita a inicio"></a>
-        </div>
-
-
-        <div id="whatsapp">
-            <a href="https://wa.me/5492914267630" target="_blank" class="whatsapp-container"><img
-                    src=".//img/whatsapp_logo_icon_257004.png" class="icono-wsp" alt="iconoWsp"></a>
-        </div>
-
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script src="./js/main.js"></script>
-    </footer>
-</body>
-
-</html>
+                </html>
